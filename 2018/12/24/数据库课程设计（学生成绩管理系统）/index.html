@@ -24,7 +24,14 @@
 <meta property="og:description" content="1、基本要求">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://w3ktt.club/words/img/E-R%E5%9B%BE.png">
-<meta property="og:updated_time" content="2018-12-25T13:01:33.650Z">
+<meta property="og:image" content="https://w3ktt.club/words/img/student.png">
+<meta property="og:image" content="https://w3ktt.club/words/img/major.png">
+<meta property="og:image" content="https://w3ktt.club/words/img/course.png">
+<meta property="og:image" content="https://w3ktt.club/words/img/choose.png">
+<meta property="og:image" content="https://w3ktt.club/words/img/cg.png">
+<meta property="og:image" content="https://w3ktt.club/words/img/ca1.png">
+<meta property="og:image" content="https://w3ktt.club/words/img/saa.png">
+<meta property="og:updated_time" content="2018-12-26T10:19:14.736Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据库课程设计（学生成绩管理系统）">
 <meta name="twitter:description" content="1、基本要求">
@@ -344,60 +351,86 @@
 <h2 id="2、数据库设计"><a href="#2、数据库设计" class="headerlink" title="2、数据库设计"></a>2、数据库设计</h2><h3 id="1、需求分析"><a href="#1、需求分析" class="headerlink" title="1、需求分析"></a>1、需求分析</h3><ol>
 <li>通过对学生成绩管理系统的日常工作进行详细的调查和分析，确定“学生成绩管理系统”要实现的功能。</li>
 <li>通过该系统，可以实现对学生基本信息，专业信息，课程信息的插入、删除、修改、浏览和查询管理；</li>
-<li>实现学生成绩的管理（查询，修改），统计各门课程的平均分并排序，统计指定班级各个学生的成绩总分和平均分；</li>
-<li>按专业查询各门课程需要补考的学生信息（学号、班级、姓名、成绩）<h3 id="2、概念设计"><a href="#2、概念设计" class="headerlink" title="2、概念设计"></a>2、概念设计</h3>通过需求分析的结果，本系统所要设计的实体和属性如下：<br>学生（学号、姓名、性别、出生年月、籍贯、班级、专业）<br>专业（专业编号、专业名称、所属学院）<br>课程（课程号、课程名、学分）<br>E-R图为<br><img src="https://w3ktt.club/words/img/E-R%E5%9B%BE.png" alt="E-R图"><h3 id="3、逻辑设计"><a href="#3、逻辑设计" class="headerlink" title="3、逻辑设计"></a>3、逻辑设计</h3>将概念设计的E-R图转换为关系模式，根据需要设计相应视图、存储过程。<h4 id="1、关系设计"><a href="#1、关系设计" class="headerlink" title="1、关系设计"></a>1、关系设计</h4>根据转换原则转换成5个关系模式，关系的主键用下划线标出。<br>学生（<u>学号</u>、姓名、性别、出生年月、籍贯、班级、专业）<br>专业（<u>专业编号</u>、专业名称、所属学院）<br>课程（<u>课程号</u>、课程名、学分）<br>选课（<u>学号</u>、<u>课程号</u>、成绩）<br>共设计4个数据库表<br><strong>学生表（student）</strong></li>
+<li>实现学生成绩的管理（查询，修改），统计各门课程的平均分并排序，统计指定班级各个学生的成绩总分和平均分;</li>
+<li>按专业查询各门课程需要补考的学生信息（学号、班级、姓名、成绩）</li>
 </ol>
+<h3 id="2、概念设计"><a href="#2、概念设计" class="headerlink" title="2、概念设计"></a>2、概念设计</h3><p>通过需求分析的结果，本系统所要设计的实体和属性如下：</p>
+<ol>
+<li>学生（学号、姓名、性别、出生年月、籍贯、班级、专业）</li>
+<li>专业（专业编号、专业名称、所属学院）</li>
+<li>课程（课程号、课程名、学分）</li>
+</ol>
+<p>E-R图为</p>
+<p><img src="https://w3ktt.club/words/img/E-R%E5%9B%BE.png" alt="E-R图"></p>
+<h3 id="3、逻辑设计"><a href="#3、逻辑设计" class="headerlink" title="3、逻辑设计"></a>3、逻辑设计</h3><p>将概念设计的E-R图转换为关系模式，根据需要设计相应视图、存储过程。</p>
+<h4 id="1、关系设计"><a href="#1、关系设计" class="headerlink" title="1、关系设计"></a>1、关系设计</h4><p>根据转换原则转换成5个关系模式，关系的主键用下划线标出。</p>
+<ol>
+<li>学生（<u>学号</u>、姓名、性别、出生年月、籍贯、班级、专业）</li>
+<li>专业（<u>专业编号</u>、专业名称、所属学院）</li>
+<li>课程（<u>课程号</u>、课程名、学分）</li>
+<li>选课（<u>学号</u>、<u>课程号</u>、成绩）</li>
+</ol>
+<p>共设计4个数据库表</p>
+<p><strong>学生表（student）</strong></p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">名称</th>
-<th style="text-align:center">类型</th>
-<th style="text-align:center">主键or外键</th>
-<th style="text-align:center">含义</th>
+<th style="text-align:center">字段名</th>
+<th style="text-align:center">数据类型</th>
+<th style="text-align:center">数据长度</th>
+<th style="text-align:center">是否为空</th>
+<th style="text-align:center">条件Key</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">sid</td>
-<td style="text-align:center">varchar（25）</td>
-<td style="text-align:center">主键</td>
 <td style="text-align:center">学号</td>
+<td style="text-align:center">Varchar</td>
+<td style="text-align:center">255</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">P_K</td>
 </tr>
 <tr>
-<td style="text-align:center">sname</td>
-<td style="text-align:center">vachar（25）</td>
-<td style="text-align:center"></td>
 <td style="text-align:center">姓名</td>
+<td style="text-align:center">Varchar</td>
+<td style="text-align:center">255</td>
+<td style="text-align:center">N</td>
 </tr>
 <tr>
-<td style="text-align:center">sex</td>
-<td style="text-align:center">varchar(10)</td>
+<td style="text-align:center">年龄</td>
+<td style="text-align:center">Int</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">N</td>
 <td style="text-align:center"></td>
+<td></td>
+</tr>
+<tr>
 <td style="text-align:center">性别</td>
+<td style="text-align:center">Varchar</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">男或女</td>
 </tr>
 <tr>
-<td style="text-align:center">birth</td>
-<td style="text-align:center">date</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">出生年月</td>
-</tr>
-<tr>
-<td style="text-align:center">address</td>
-<td style="text-align:center">varchar（255）</td>
-<td style="text-align:center"></td>
 <td style="text-align:center">籍贯</td>
+<td style="text-align:center">Varchar</td>
+<td style="text-align:center">255</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td style="text-align:center">class</td>
-<td style="text-align:center">varchar（255）</td>
-<td style="text-align:center"></td>
 <td style="text-align:center">班级</td>
+<td style="text-align:center">Varchar</td>
+<td style="text-align:center">255</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td style="text-align:center">major</td>
-<td style="text-align:center">varchar（255）</td>
-<td style="text-align:center"></td>
 <td style="text-align:center">专业</td>
+<td style="text-align:center">Int</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">F_K</td>
 </tr>
 </tbody>
 </table>
@@ -405,30 +438,33 @@
 <table>
 <thead>
 <tr>
-<th style="text-align:center">名称</th>
-<th style="text-align:center">类型</th>
-<th style="text-align:center">主键or外键</th>
-<th style="text-align:center">含义</th>
+<th style="text-align:center">字段名</th>
+<th style="text-align:center">数据类型</th>
+<th style="text-align:center">数据长度</th>
+<th style="text-align:center">是否为空</th>
+<th style="text-align:center">条件Key</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">mid</td>
-<td style="text-align:center">varchar（25）</td>
-<td style="text-align:center">主键</td>
 <td style="text-align:center">专业编号</td>
+<td style="text-align:center">Int</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">P_K</td>
 </tr>
 <tr>
-<td style="text-align:center">mname</td>
-<td style="text-align:center">vachar（255）</td>
-<td style="text-align:center"></td>
 <td style="text-align:center">专业名称</td>
+<td style="text-align:center">Varchar</td>
+<td style="text-align:center">255</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td style="text-align:center">dept</td>
-<td style="text-align:center">varchar(255)</td>
-<td style="text-align:center"></td>
 <td style="text-align:center">所属学院</td>
+<td style="text-align:center">Varchar</td>
+<td style="text-align:center">255</td>
+<td style="text-align:center">N</td>
 </tr>
 </tbody>
 </table>
@@ -436,30 +472,33 @@
 <table>
 <thead>
 <tr>
-<th style="text-align:center">名称</th>
-<th style="text-align:center">类型</th>
-<th style="text-align:center">主键or外键</th>
-<th style="text-align:center">含义</th>
+<th style="text-align:center">字段名</th>
+<th style="text-align:center">数据类型</th>
+<th style="text-align:center">数据长度</th>
+<th style="text-align:center">是否为空</th>
+<th style="text-align:center">条件Key</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">cid</td>
-<td style="text-align:center">varchar（25）</td>
-<td style="text-align:center">主键</td>
-<td style="text-align:center">课程号</td>
+<td style="text-align:center">课程编号</td>
+<td style="text-align:center">Int</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">P_K</td>
 </tr>
 <tr>
-<td style="text-align:center">cname</td>
-<td style="text-align:center">vachar（255）</td>
-<td style="text-align:center"></td>
 <td style="text-align:center">课程名称</td>
+<td style="text-align:center">Varchar</td>
+<td style="text-align:center">255</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td style="text-align:center">score</td>
-<td style="text-align:center">double</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">学分</td>
+<td style="text-align:center">课程学分</td>
+<td style="text-align:center">Float</td>
+<td style="text-align:center">255</td>
+<td style="text-align:center">N</td>
 </tr>
 </tbody>
 </table>
@@ -467,37 +506,50 @@
 <table>
 <thead>
 <tr>
-<th style="text-align:center">名称</th>
-<th style="text-align:center">类型</th>
-<th style="text-align:center">主键or外键</th>
-<th style="text-align:center">含义</th>
+<th style="text-align:center">字段名</th>
+<th style="text-align:center">数据类型</th>
+<th style="text-align:center">数据长度</th>
+<th style="text-align:center">是否为空</th>
+<th style="text-align:center">条件Key</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">sid</td>
-<td style="text-align:center">varchar（25）</td>
-<td style="text-align:center">主键</td>
 <td style="text-align:center">学生学号</td>
+<td style="text-align:center">Varchar</td>
+<td style="text-align:center">255</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">F_K</td>
 </tr>
 <tr>
-<td style="text-align:center">cid</td>
-<td style="text-align:center">vachar（25）</td>
-<td style="text-align:center">主键</td>
 <td style="text-align:center">课程编号</td>
+<td style="text-align:center">Int</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">F_K</td>
 </tr>
 <tr>
-<td style="text-align:center">grade</td>
-<td style="text-align:center">double</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">成绩</td>
+<td style="text-align:center">学生成绩</td>
+<td style="text-align:center">Float</td>
+<td style="text-align:center">255</td>
+<td style="text-align:center">N</td>
 </tr>
 </tbody>
 </table>
-<h4 id="2、设计视图"><a href="#2、设计视图" class="headerlink" title="2、设计视图"></a>2、设计视图</h4><p><strong>视图一</strong><br>统计各门课程的平均成绩<br>其创建视图的代码如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">create view 各门课程的平均成绩</span><br><span class="line">as</span><br><span class="line">select course.cid, course.cname, average(select.grade) </span><br><span class="line">from course,select where course.cid=select.cid</span><br></pre></td></tr></table></figure></p>
-<p><strong>视图二</strong><br>按专业查询各门课程需要补考的学生信息<br>其创建视图的代码如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">create view 各门课程的平均成绩</span><br><span class="line">as</span><br><span class="line">select student.sid,student.class,student.sname,select.grade</span><br><span class="line">from student,select where student.sid=select.id and </span><br><span class="line">select.grade&lt;60</span><br><span class="line">group by student.major</span><br></pre></td></tr></table></figure></p>
-<h4 id="3、设计存储过程"><a href="#3、设计存储过程" class="headerlink" title="3、设计存储过程"></a>3、设计存储过程</h4><p>统计指定班级各个学生的成绩总分和平均分<br>代码如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create produce</span><br></pre></td></tr></table></figure></p>
-
+<h4 id="2、设计视图"><a href="#2、设计视图" class="headerlink" title="2、设计视图"></a>2、设计视图</h4><p><strong>视图一</strong><br>统计各门课程的平均成绩<br>其创建视图的代码如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">create view</span><br><span class="line">as</span><br><span class="line">select course.CurrId AS 课程编号,course.CurrName AS 课程称,</span><br><span class="line">round(avg(grade.Grades),2) AS 平均成绩</span><br><span class="line">from (course join grade)</span><br><span class="line">where (course.CurrId = grade.CurrId)</span><br><span class="line">group by course.CurrId</span><br></pre></td></tr></table></figure></p>
+<p><strong>视图二</strong><br>按专业查询各门课程需要补考的学生信息<br>其创建视图的代码如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">create view</span><br><span class="line">as</span><br><span class="line">select student.StuId AS 学号,</span><br><span class="line">student.StuName AS 姓名,</span><br><span class="line">student.Class AS 班级,</span><br><span class="line">major.MajName AS 专业名称,</span><br><span class="line">grade.Grades AS 成绩,</span><br><span class="line">course.CurrName AS 课程名</span><br><span class="line">from (((student join grade) join course) join major)</span><br><span class="line">where ((student.StuId = grade.StuId) and (grade.CurrId = course.CurrId)</span><br><span class="line">and (student.MajId = major.MajId) and (grade.Grades &lt; 60))</span><br></pre></td></tr></table></figure></p>
+<h4 id="3、设计存储过程"><a href="#3、设计存储过程" class="headerlink" title="3、设计存储过程"></a>3、设计存储过程</h4><p>统计指定班级各个学生的成绩总分和平均分<br>代码如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">BEGIN</span><br><span class="line">	#Routine body goes here...</span><br><span class="line">	SELECT student.StuId AS 学号,</span><br><span class="line">    student.StuName AS 姓名,</span><br><span class="line">    student.Class AS 班级,</span><br><span class="line">    SUM(grade.Grades) AS 总成绩,</span><br><span class="line">    AVG(grade.Grades) AS 平均成绩 FROM student,grade</span><br><span class="line">    WHERE student.StuId=grade.StuId AND student.Class=class</span><br><span class="line">    GROUP BY student.StuId;</span><br><span class="line">END</span><br></pre></td></tr></table></figure></p>
+<h2 id="3、数据库功能实现"><a href="#3、数据库功能实现" class="headerlink" title="3、数据库功能实现"></a>3、数据库功能实现</h2><h3 id="1、创建数据库表"><a href="#1、创建数据库表" class="headerlink" title="1、创建数据库表"></a>1、创建数据库表</h3><h4 id="1、学生表"><a href="#1、学生表" class="headerlink" title="1、学生表"></a>1、学生表</h4><p><img src="https://w3ktt.club/words/img/student.png" alt="学生表"></p>
+<h4 id="2、专业表"><a href="#2、专业表" class="headerlink" title="2、专业表"></a>2、专业表</h4><p><img src="https://w3ktt.club/words/img/major.png" alt="专业表"></p>
+<h4 id="3、课程表"><a href="#3、课程表" class="headerlink" title="3、课程表"></a>3、课程表</h4><p><img src="https://w3ktt.club/words/img/course.png" alt="课程表"></p>
+<h4 id="4、选课表"><a href="#4、选课表" class="headerlink" title="4、选课表"></a>4、选课表</h4><p><img src="https://w3ktt.club/words/img/choose.png" alt="选课表"></p>
+<h3 id="2、功能实现"><a href="#2、功能实现" class="headerlink" title="2、功能实现"></a>2、功能实现</h3><h4 id="1、学生基本信息查询功能（视图实现）。"><a href="#1、学生基本信息查询功能（视图实现）。" class="headerlink" title="1、学生基本信息查询功能（视图实现）。"></a>1、学生基本信息查询功能（视图实现）。</h4><p><img src="" alt="查询学生基本信息"></p>
+<h4 id="2、查询某个班级的学生成绩（视图实现）。"><a href="#2、查询某个班级的学生成绩（视图实现）。" class="headerlink" title="2、查询某个班级的学生成绩（视图实现）。"></a>2、查询某个班级的学生成绩（视图实现）。</h4><p><img src="https://w3ktt.club/words/img/cg.png" alt="查询班级成绩"></p>
+<h4 id="3、学生信息的录入（存储过程实现）。"><a href="#3、学生信息的录入（存储过程实现）。" class="headerlink" title="3、学生信息的录入（存储过程实现）。"></a>3、学生信息的录入（存储过程实现）。</h4><p><img src="" alt="学生信息录入"></p>
+<h4 id="4、实现各门课程成绩的自动排序和平均分统计（视图实现）。"><a href="#4、实现各门课程成绩的自动排序和平均分统计（视图实现）。" class="headerlink" title="4、实现各门课程成绩的自动排序和平均分统计（视图实现）。"></a>4、实现各门课程成绩的自动排序和平均分统计（视图实现）。</h4><p><img src="https://w3ktt.club/words/img/ca1.png" alt="各门课程平均成绩"></p>
+<h4 id="5、统计指定班级各个学生的成绩总分和平均分（存储过程实现）。"><a href="#5、统计指定班级各个学生的成绩总分和平均分（存储过程实现）。" class="headerlink" title="5、统计指定班级各个学生的成绩总分和平均分（存储过程实现）。"></a>5、统计指定班级各个学生的成绩总分和平均分（存储过程实现）。</h4><p><img src="https://w3ktt.club/words/img/saa.png" alt="学生总分和平均分"></p>
+<h4 id="6、按专业查询各门课程需要补考的学生信息（存储过程实现）。"><a href="#6、按专业查询各门课程需要补考的学生信息（存储过程实现）。" class="headerlink" title="6、按专业查询各门课程需要补考的学生信息（存储过程实现）。"></a>6、按专业查询各门课程需要补考的学生信息（存储过程实现）。</h4><p><img src="" alt="查询需补考学生信息"></p>
+<h2 id="4、总结和分析"><a href="#4、总结和分析" class="headerlink" title="4、总结和分析"></a>4、总结和分析</h2>
       
     </div>
     
@@ -508,7 +560,7 @@
         <p><span>本文标题:</span><a href="/2018/12/24/数据库课程设计（学生成绩管理系统）/">数据库课程设计（学生成绩管理系统）</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">kangtan</a></p>
         <p><span>发布时间:</span>2018-12-24, 12:38:45</p>
-        <p><span>最后更新:</span>2018-12-25, 21:01:33</p>
+        <p><span>最后更新:</span>2018-12-26, 18:19:14</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/12/24/数据库课程设计（学生成绩管理系统）/" title="数据库课程设计（学生成绩管理系统）">w3ktt.club/2018/12/24/数据库课程设计（学生成绩管理系统）/</a>
             <span class="copy-path" data-clipboard-text="原文: w3ktt.club/2018/12/24/数据库课程设计（学生成绩管理系统）/　　作者: kangtan" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>

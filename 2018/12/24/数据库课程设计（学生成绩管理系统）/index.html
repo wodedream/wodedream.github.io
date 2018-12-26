@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="kangtan">
+
+
+
+<meta name="description" content="1、基本要求">
+<meta name="keywords" content="数据库原理,课程设计">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据库课程设计（学生成绩管理系统）">
+<meta property="og:url" content="/2018/12/24/数据库课程设计（学生成绩管理系统）/index.html">
+<meta property="og:site_name" content="kangtan的博客">
+<meta property="og:description" content="1、基本要求">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://w3ktt.club/words/img/E-R%E5%9B%BE.png">
+<meta property="og:updated_time" content="2018-12-25T13:01:33.650Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数据库课程设计（学生成绩管理系统）">
+<meta name="twitter:description" content="1、基本要求">
+<meta name="twitter:image" content="https://w3ktt.club/words/img/E-R%E5%9B%BE.png">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="kangtan的博客" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=434828571,4005966633&fm=26&gp=0.jpg">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>数据库课程设计（学生成绩管理系统） | kangtan的博客</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?023158b4c9d97942be746fc9f5fde1da";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+	
+	<script>
+	(function(){
+		var bp = document.createElement('script');
+		bp.src = '//push.zhanzhang.baidu.com/push.js';
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+  
+
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+
+	
+		<form id="search-form" class="search">
+			<input type="text" id="st-search-input" name="q" results="0" class="st-default-search-input" maxlength="50" placeholder="Search..." autocomplete="off" autocorrect="off">
+			<i class="fa fa-times" onclick="resetSearch()"></i>
+		</form>
+	
+
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=434828571,4005966633&amp;fm=26&amp;gp=0.jpg" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">kangtan</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">世界上只有一种成功，就是以自己喜欢的方式过一生</p>
+        
+
+        
+            <div id="local-search-result"></div>
+            <p class="no-result">No results found <i class="fa fa-spinner fa-pulse"></i></p>
+			<p class="loading-xml">Loading XML File... <i class="fa fa-spinner fa-pulse"></i></p>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:1575224782@qq.cn" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="https://github.com/wodedream" title="GitHub"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown基本操作/">Markdown基本操作</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/搭建个人博客的步骤/">搭建个人博客的步骤</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据库原理/">数据库原理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/添加访问量/">添加访问量</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算机系统结构/">计算机系统结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/课程设计/">课程设计</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://blog.csdn.net/Adusts">我的csdn</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://jwxt.jsu.edu.cn/jsxsd/">强智系统</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">闻道有先后，术业有专攻</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">kangtan</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=434828571,4005966633&amp;fm=26&amp;gp=0.jpg" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">kangtan</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">世界上只有一种成功，就是以自己喜欢的方式过一生</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:1575224782@qq.cn" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/wodedream" title="GitHub"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
+</nav>
+      <div class="body-wrap"><article id="post-数据库课程设计（学生成绩管理系统）" class="article article-type-post" itemscope="" itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/12/24/数据库课程设计（学生成绩管理系统）/" class="article-date">
+      <time datetime="2018-12-24T04:38:45.000Z" itemprop="datePublished">2018-12-24</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      数据库课程设计（学生成绩管理系统）
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/学习资料/">学习资料</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据库原理/">数据库原理</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/课程设计/">课程设计</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="1、基本要求"><a href="#1、基本要求" class="headerlink" title="1、基本要求"></a>1、基本要求</h2><a id="more"></a>
+<ol>
+<li>实现学生基本信息（学号、姓名、性别、出生年月、籍贯、班级、专业），专业信息（专业编号、专业名称、所属学院），课程信息（课程号、课程名、学分）的插入、删除、修改、浏览和查询管理；</li>
+<li>实现学生成绩管理（学号、课程编号、成绩）；</li>
+<li>建立数据库相关表之间的参照完整性约束；</li>
+<li>实现各门课程成绩的自动排序和平均分统计；</li>
+<li>创建存储过程，统计指定班级各个学生的成绩总分和平均分；</li>
+<li>创建视图，按专业查询各门课程需要补考的学生信息（学号、班级、姓名、成绩），以便安排补考。</li>
+</ol>
+<h2 id="2、数据库设计"><a href="#2、数据库设计" class="headerlink" title="2、数据库设计"></a>2、数据库设计</h2><h3 id="1、需求分析"><a href="#1、需求分析" class="headerlink" title="1、需求分析"></a>1、需求分析</h3><ol>
+<li>通过对学生成绩管理系统的日常工作进行详细的调查和分析，确定“学生成绩管理系统”要实现的功能。</li>
+<li>通过该系统，可以实现对学生基本信息，专业信息，课程信息的插入、删除、修改、浏览和查询管理；</li>
+<li>实现学生成绩的管理（查询，修改），统计各门课程的平均分并排序，统计指定班级各个学生的成绩总分和平均分；</li>
+<li>按专业查询各门课程需要补考的学生信息（学号、班级、姓名、成绩）<h3 id="2、概念设计"><a href="#2、概念设计" class="headerlink" title="2、概念设计"></a>2、概念设计</h3>通过需求分析的结果，本系统所要设计的实体和属性如下：<br>学生（学号、姓名、性别、出生年月、籍贯、班级、专业）<br>专业（专业编号、专业名称、所属学院）<br>课程（课程号、课程名、学分）<br>E-R图为<br><img src="https://w3ktt.club/words/img/E-R%E5%9B%BE.png" alt="E-R图"><h3 id="3、逻辑设计"><a href="#3、逻辑设计" class="headerlink" title="3、逻辑设计"></a>3、逻辑设计</h3>将概念设计的E-R图转换为关系模式，根据需要设计相应视图、存储过程。<h4 id="1、关系设计"><a href="#1、关系设计" class="headerlink" title="1、关系设计"></a>1、关系设计</h4>根据转换原则转换成5个关系模式，关系的主键用下划线标出。<br>学生（<u>学号</u>、姓名、性别、出生年月、籍贯、班级、专业）<br>专业（<u>专业编号</u>、专业名称、所属学院）<br>课程（<u>课程号</u>、课程名、学分）<br>选课（<u>学号</u>、<u>课程号</u>、成绩）<br>共设计4个数据库表<br><strong>学生表（student）</strong></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">主键or外键</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">sid</td>
+<td style="text-align:center">varchar（25）</td>
+<td style="text-align:center">主键</td>
+<td style="text-align:center">学号</td>
+</tr>
+<tr>
+<td style="text-align:center">sname</td>
+<td style="text-align:center">vachar（25）</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">姓名</td>
+</tr>
+<tr>
+<td style="text-align:center">sex</td>
+<td style="text-align:center">varchar(10)</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">性别</td>
+</tr>
+<tr>
+<td style="text-align:center">birth</td>
+<td style="text-align:center">date</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">出生年月</td>
+</tr>
+<tr>
+<td style="text-align:center">address</td>
+<td style="text-align:center">varchar（255）</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">籍贯</td>
+</tr>
+<tr>
+<td style="text-align:center">class</td>
+<td style="text-align:center">varchar（255）</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">班级</td>
+</tr>
+<tr>
+<td style="text-align:center">major</td>
+<td style="text-align:center">varchar（255）</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">专业</td>
+</tr>
+</tbody>
+</table>
+<p><strong>专业表（major）</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">主键or外键</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">mid</td>
+<td style="text-align:center">varchar（25）</td>
+<td style="text-align:center">主键</td>
+<td style="text-align:center">专业编号</td>
+</tr>
+<tr>
+<td style="text-align:center">mname</td>
+<td style="text-align:center">vachar（255）</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">专业名称</td>
+</tr>
+<tr>
+<td style="text-align:center">dept</td>
+<td style="text-align:center">varchar(255)</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">所属学院</td>
+</tr>
+</tbody>
+</table>
+<p><strong>课程表（course）</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">主键or外键</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">cid</td>
+<td style="text-align:center">varchar（25）</td>
+<td style="text-align:center">主键</td>
+<td style="text-align:center">课程号</td>
+</tr>
+<tr>
+<td style="text-align:center">cname</td>
+<td style="text-align:center">vachar（255）</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">课程名称</td>
+</tr>
+<tr>
+<td style="text-align:center">score</td>
+<td style="text-align:center">double</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">学分</td>
+</tr>
+</tbody>
+</table>
+<p><strong>选课表（select）</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">主键or外键</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">sid</td>
+<td style="text-align:center">varchar（25）</td>
+<td style="text-align:center">主键</td>
+<td style="text-align:center">学生学号</td>
+</tr>
+<tr>
+<td style="text-align:center">cid</td>
+<td style="text-align:center">vachar（25）</td>
+<td style="text-align:center">主键</td>
+<td style="text-align:center">课程编号</td>
+</tr>
+<tr>
+<td style="text-align:center">grade</td>
+<td style="text-align:center">double</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">成绩</td>
+</tr>
+</tbody>
+</table>
+<h4 id="2、设计视图"><a href="#2、设计视图" class="headerlink" title="2、设计视图"></a>2、设计视图</h4><p><strong>视图一</strong><br>统计各门课程的平均成绩<br>其创建视图的代码如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">create view 各门课程的平均成绩</span><br><span class="line">as</span><br><span class="line">select course.cid, course.cname, average(select.grade) </span><br><span class="line">from course,select where course.cid=select.cid</span><br></pre></td></tr></table></figure></p>
+<p><strong>视图二</strong><br>按专业查询各门课程需要补考的学生信息<br>其创建视图的代码如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">create view 各门课程的平均成绩</span><br><span class="line">as</span><br><span class="line">select student.sid,student.class,student.sname,select.grade</span><br><span class="line">from student,select where student.sid=select.id and </span><br><span class="line">select.grade&lt;60</span><br><span class="line">group by student.major</span><br></pre></td></tr></table></figure></p>
+<h4 id="3、设计存储过程"><a href="#3、设计存储过程" class="headerlink" title="3、设计存储过程"></a>3、设计存储过程</h4><p>统计指定班级各个学生的成绩总分和平均分<br>代码如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create produce</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2018/12/24/数据库课程设计（学生成绩管理系统）/">数据库课程设计（学生成绩管理系统）</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">kangtan</a></p>
+        <p><span>发布时间:</span>2018-12-24, 12:38:45</p>
+        <p><span>最后更新:</span>2018-12-25, 21:01:33</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/12/24/数据库课程设计（学生成绩管理系统）/" title="数据库课程设计（学生成绩管理系统）">/2018/12/24/数据库课程设计（学生成绩管理系统）/</a>
+            <span class="copy-path" data-clipboard-text="原文: /2018/12/24/数据库课程设计（学生成绩管理系统）/　　作者: kangtan" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2018/12/24/Markdown基本操作/">
+                    Markdown基本操作
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2018/12/24/给Hexo博客添加访问统计/">
+                    给Hexo博客添加访问统计
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"数据库课程设计（学生成绩管理系统）　| kangtan的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+	
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2018/12/24/Markdown基本操作/" title="上一篇: Markdown基本操作">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2018/12/24/给Hexo博客添加访问统计/" title="下一篇: 给Hexo博客添加访问统计">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/12/26/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/24/Markdown基本操作/">Markdown基本操作</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/24/数据库课程设计（学生成绩管理系统）/">数据库课程设计（学生成绩管理系统）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/24/给Hexo博客添加访问统计/">给Hexo博客添加访问统计</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/24/数据库原理课程设计方案/">数据库原理课程设计方案</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/23/我的测试/">我的测试</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/23/操作系统复习资料/">操作系统复习资料</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/23/Windows下通过GitHub+Hexo搭建个人博客的步骤/">Windows下通过GitHub+Hexo搭建个人博客的步骤</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/22/计算机系统结构复习资料/">计算机系统结构复习资料</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2018 kangtan
+            </div>
+            <div class="footer-right">
+                
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style="display:none">
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style="display:none">
+                        <span id="page-visit" title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 8;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  </div>
+</body>
+</html>

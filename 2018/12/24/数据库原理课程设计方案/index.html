@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="kangtan">
+
+
+
+<meta name="description" content="一、设计的目的课程设计是学生对课程所学知识的综合运用，它与课堂听讲、上机实验、课外练习、自学研究相辅相成，构成一个完整的课程教学体系。">
+<meta name="keywords" content="数据库原理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据库原理课程设计方案">
+<meta property="og:url" content="/2018/12/24/数据库原理课程设计方案/index.html">
+<meta property="og:site_name" content="kangtan的博客">
+<meta property="og:description" content="一、设计的目的课程设计是学生对课程所学知识的综合运用，它与课堂听讲、上机实验、课外练习、自学研究相辅相成，构成一个完整的课程教学体系。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-12-24T02:16:29.963Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数据库原理课程设计方案">
+<meta name="twitter:description" content="一、设计的目的课程设计是学生对课程所学知识的综合运用，它与课堂听讲、上机实验、课外练习、自学研究相辅相成，构成一个完整的课程教学体系。">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="kangtan的博客" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=434828571,4005966633&fm=26&gp=0.jpg">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>数据库原理课程设计方案 | kangtan的博客</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?023158b4c9d97942be746fc9f5fde1da";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+	
+	<script>
+	(function(){
+		var bp = document.createElement('script');
+		bp.src = '//push.zhanzhang.baidu.com/push.js';
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+  
+
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+
+	
+		<form id="search-form" class="search">
+			<input type="text" id="st-search-input" name="q" results="0" class="st-default-search-input" maxlength="50" placeholder="Search..." autocomplete="off" autocorrect="off">
+			<i class="fa fa-times" onclick="resetSearch()"></i>
+		</form>
+	
+
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=434828571,4005966633&amp;fm=26&amp;gp=0.jpg" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">kangtan</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">世界上只有一种成功，就是以自己喜欢的方式过一生</p>
+        
+
+        
+            <div id="local-search-result"></div>
+            <p class="no-result">No results found <i class="fa fa-spinner fa-pulse"></i></p>
+			<p class="loading-xml">Loading XML File... <i class="fa fa-spinner fa-pulse"></i></p>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:1575224782@qq.cn" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="https://github.com/wodedream" title="GitHub"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown基本操作/">Markdown基本操作</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/搭建个人博客的步骤/">搭建个人博客的步骤</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据库原理/">数据库原理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/添加访问量/">添加访问量</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算机系统结构/">计算机系统结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/课程设计/">课程设计</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://blog.csdn.net/Adusts">我的csdn</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://jwxt.jsu.edu.cn/jsxsd/">强智系统</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">闻道有先后，术业有专攻</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">kangtan</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=434828571,4005966633&amp;fm=26&amp;gp=0.jpg" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">kangtan</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">世界上只有一种成功，就是以自己喜欢的方式过一生</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:1575224782@qq.cn" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/wodedream" title="GitHub"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
+</nav>
+      <div class="body-wrap"><article id="[layout]-数据库原理课程设计方案" class="article article-type-[layout]" itemscope="" itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/12/24/数据库原理课程设计方案/" class="article-date">
+      <time datetime="2018-12-24T01:36:29.000Z" itemprop="datePublished">2018-12-24</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      数据库原理课程设计方案
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/学习资料/">学习资料</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据库原理/">数据库原理</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="一、设计的目的"><a href="#一、设计的目的" class="headerlink" title="一、设计的目的"></a>一、设计的目的</h2><p>课程设计是学生对课程所学知识的综合运用，它与课堂听讲、上机实验、课外练习、自学研究相辅相成，构成一个完整的课程教学体系。<br><a id="more"></a><br>《数据库原理》课程设计是计算机科学与技术课程体系中专业实践教学的重要环节之一，是学完《数据库原理》课程后进行的一次全面综合实践，其目的在于加深学生对数据库基本概念、基本原理，以及关系数据库设计理论的理解，通过课程设计的综合训练，培养学生动手解决数据库分析、设计和应用等实际问题的能力，掌握关系数据库系统建设的流程，掌握E-R图的绘制方法以及关系数据库设计方法、数据库规范化处理的技能，并通过业务SQL描述深入掌握SQL的使用方法。</p>
+<h2 id="二、参与人员与组织方式"><a href="#二、参与人员与组织方式" class="headerlink" title="二、参与人员与组织方式"></a>二、参与人员与组织方式</h2><p>按照专业教学计划安排，本课程设计要求2016级计算机科学与技术专业所有学生都必须参与。为提高课程设计的质量，取得更好的教学效果，本次课程设计采用集中指导，分组管理，独立完成的实施方式。课程设计时间安排在本学期第17周在实验室集中进行。课程设计期间，每天配备2名专业教师进行集中指导（具体指导安排见分组表）。课程设计的最后一天时间为学生课程设计成果验收、成绩评定及设计答辩阶段，随机抽取40%左右小组同学参加答辩。</p>
+<h2 id="三、设计安排"><a href="#三、设计安排" class="headerlink" title="三、设计安排"></a>三、设计安排</h2><p>课程设计内容安排表</p>
+<table>
+<thead>
+<tr>
+<th>内容</th>
+<th>学时</th>
+<th>时间</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>动员学生，布置任务。学生资料查阅，回顾和复习关系数据库设计的基本理论知识和重要方法。</td>
+<td>8</td>
+<td>2018年12月24日</td>
+</tr>
+<tr>
+<td>运用关系数据库设计方法进行数据库需求分析、概念结构、逻辑结构及物理结构设计。</td>
+<td>8</td>
+<td>2018年12月25日</td>
+</tr>
+<tr>
+<td>数据库的具体实施；数据库管理系统的编码实现及测试；按模板要求撰写及打印《数据库原理课程设计报告》。</td>
+<td>16</td>
+<td>2018年12月26日，2018年12月27日</td>
+</tr>
+<tr>
+<td>成果验收，成绩说不定，优秀作品答辩。</td>
+<td>8</td>
+<td>2018年12月28日</td>
+</tr>
+</tbody>
+</table>
+<h2 id="四、课程设计报告要求"><a href="#四、课程设计报告要求" class="headerlink" title="四、课程设计报告要求"></a>四、课程设计报告要求</h2><p>每组提交一份打印版的《课程设计报告》文档。文档必须规范整齐，在内容和排版格式两方面者符合要求。《课程设计报告》内容按以下五点撰写（可参考附录课程设计报告模板）：<br>1．问题描述：问题的具体描述，选题的背景及意义。<br>2．需求分析：系统的数据需求和功能需求描述，数据流图及数据字典。<br>3．数据库设计： E-R模型、关系模式的描述，关系模式的设计（关系模式至少要满足第三范式），数据库的设计要考虑安全性和完整性的要求。<br>4．具体的解决实例。<br>5．课程设计总结。<br>课程设计报告排版格式要求如下：<br>1．字体字号：一级标题黑体小三，二级标题黑体四号，正文宋体小四。<br>2．行间距：全文固定值22磅。<br>3．页边距：上、下、左、右页边距均为2.5厘米。<br>4．单面A4纸打印。</p>
+<h2 id="五、成绩评定"><a href="#五、成绩评定" class="headerlink" title="五、成绩评定"></a>五、成绩评定</h2><p>考核要求：根据学生完成任务的情况、课程设计报告质量和课程设计过程中的工作态度以及出勤综合评分。课程设计成绩按优秀、良好、中等、及格和不及格五个等级，由指导教师根据学生的设计期间的表现综合评定，并附有指导教师评语。</p>
+<h2 id="六、指导说明"><a href="#六、指导说明" class="headerlink" title="六、指导说明"></a>六、指导说明</h2><p>1．辅导学生按下列步骤完成各题目的设计并写出课程设计报告，在对所选题目进行调研的基础上，明确该选题要做什么。<br>2．指导学生完成以下工作：建立系统数据流图和数据字典，设计数据库的概念结构（E-R图）和逻辑结构（注明主码和外码的关系模式），设计并建立数据库中的数据表、视图（如果使用），实现触发器、存储过程（如果使用）的定义（可以用SQL脚本提供）和使用，。<br>3．对学生设计文档及课程设计完成情况（包括设计结果的合理性、规范程度和实际运行结果）进行评价和总结。</p>
+<h2 id="七、课程设计选题"><a href="#七、课程设计选题" class="headerlink" title="七、课程设计选题"></a>七、课程设计选题</h2><p>课程设计题目以选用学生相对比较熟悉的业务模型为宜，要求通过本实践性教学环节，能较好地巩固数据库的基本概念、基本原理、关系数据库的设计理论、设计方法等知识，针对实际问题设计概念模型，并完成小型数据库应用系统的设计与实现。</p>
+<h3 id="1．选题范围"><a href="#1．选题范围" class="headerlink" title="1．选题范围"></a>1．选题范围</h3><p>基础理论问题，数据库的基本概念、基本原理、关系数据库的设计理论、设计方法等，数据库的设计与实现，数据建模工具与数据库管理系统软件的应用。</p>
+<h3 id="2-选题要求"><a href="#2-选题要求" class="headerlink" title="2.选题要求"></a>2.选题要求</h3><p>选题要求针对能覆盖多个知识点，使用现有工具能够解决的问题，难易适中，具有典型意义。</p>
+<h3 id="3-参考选题及设计要求"><a href="#3-参考选题及设计要求" class="headerlink" title="3.参考选题及设计要求"></a>3.参考选题及设计要求</h3><h4 id="（1）电费收缴管理系统"><a href="#（1）电费收缴管理系统" class="headerlink" title="（1）电费收缴管理系统"></a>（1）电费收缴管理系统</h4><p>基本要求：实现客户（客户编号、姓名、性别、联系电话、住址），用电类型（类别号、类别名、电价）及业务员信息（工号、姓名、联系电话）的插入、删除、修改、浏览和查询管理；实现客户用电管理（客户号、月份、用电类别号、用电度数）；实现客户费用管理（客户号、月份、费用、收费标志），收费标志的默认值置为未收；实现收费登记（客户、月份、应收费用、实收费用、业务员）；建立数据库相关表之间的参照完整性约束；创建触发器，实现收费时自动更新应收费用和实收费用，计算本次结余，然后修改客户信息表中的结余金额； 创建存储过程，统计指定月份应收费用和实收费用； 创建视图，查询指定月份未交费的用户信息，以便崔费。</p>
+<h4 id="（2）食品库存管理系统"><a href="#（2）食品库存管理系统" class="headerlink" title="（2）食品库存管理系统"></a>（2）食品库存管理系统</h4><p>基本要求：实现食品信息（食品编号、名称、类别号、单价、库存数、保质期），管理员信息（工号、姓名、联系电话）和食品类别信息（类别号、类别名称、是否易变质食品）的插入、删除、修改、浏览和查询管理；实现食品的出库管理（出库单号、食品名称、出库数量、出库时间、管理员工号）；实现食品的入库管理（入库单号、食品名称、入库数量、入库时间、管理员工号）；建立数据库相关表之间的参照完整性约束；创建触发器，实现已过保质期食品的自动毁除登记管理；创建视图，查询不同类别食品的编号、名称、总数和库存量；创建存储过程，查询库存数少于指定数目的在库食品信息，以便进货。</p>
+<h4 id="（3）房租收缴管理系统"><a href="#（3）房租收缴管理系统" class="headerlink" title="（3）房租收缴管理系统"></a>（3）房租收缴管理系统</h4><p>基本要求：实现租客信息（租客编号、姓名、性别、身份、身份证号码、联系电话），房屋类型（类别号、类别名、租金）及业务员信息（工号、姓名、联系电话）的插入、删除、修改、浏览和查询管理；实现租客租房管理（租客编号、月份、所租房屋类别、租用月数）；实现房租管理（租客编号、月份、费用、收费标志），收费标志的默认值置为未收；实现缴费登记（租客编号、月份、应收费用、实收费用、业务员）；建立数据库相关表之间的参照完整性约束；创建触发器，实现收费时应收费用和实收费用的自动更新，计算本次结余，然后修改客户信息表中的结余金额； 创建存储过程，统计指定月份应收费用和实收费用；创建视图，查询指定月份未交费的用户信息，以便崔费。</p>
+<h4 id="（4）学生成绩管理系统"><a href="#（4）学生成绩管理系统" class="headerlink" title="（4）学生成绩管理系统"></a>（4）学生成绩管理系统</h4><p>基本要求：实现学生基本信息（学号、姓名、性别、出生年月、籍贯、班级、专业），专业信息（专业编号、专业名称、所属学院），课程信息（课程号、课程名、学分）的插入、删除、修改、浏览和查询管理；实现学生成绩管理（学号、课程编号、成绩）；建立数据库相关表之间的参照完整性约束；实现各门课程成绩的自动排序和平均分统计；创建存储过程，统计指定班级各个学生的成绩总分和平均分；创建视图，按专业查询各门课程需要补考的学生信息（学号、班级、姓名、成绩），以便安排补考。</p>
+<h4 id="（5）图书借阅系统"><a href="#（5）图书借阅系统" class="headerlink" title="（5）图书借阅系统"></a>（5）图书借阅系统</h4><p>基本要求：实现图书信息（编号、名称、类别、价格、出版社）和读者信息（借书证编号、姓名、性别）的插入、删除、修改、浏览和查询管理；实现图书的借阅管理（借书证编号、姓名、图书名称、借阅时间、应还时间）和归还管理（借书证编号、姓名、图书名称、借阅时间、应还时间、归还时间）；实现超期罚款管理（借书证编号、姓名、应交罚款）；建立数据库相关表之间的参照完整性约束；创建触发器，分别实现借书和还书时自动更新图书的在册数量；创建视图，查询各种图书的书号、书名、总数和在册数；创建存储过程，查询指定读者借阅图书的情况。</p>
+<h4 id="（6）物业费收缴管理系统"><a href="#（6）物业费收缴管理系统" class="headerlink" title="（6）物业费收缴管理系统"></a>（6）物业费收缴管理系统</h4><p>基本要求：实现业主信息（业主编号、姓名、性别、联系电话），房屋类型（类别号、类别名、每平方米租金）及业务员信息（工号、姓名、联系电话）的插入、删除、修改、浏览和查询管理；实现业主物业费管理（业主编号、房屋类别号、房屋面积、月份、应缴费用、收费标志），收费标志的默认值置为未收；实现缴费登记（业主编号、月份、应缴费用、实缴费用、业务员）；建立数据库相关表之间的参照完整性约束；创建触发器，实现收费时自动更新应收费用和实收费用，计算本次结余，然后修改客户信息表中的结余金额； 创建存储过程，统计指定月份应收费用和实收费用；创建视图，查询指定月份未交费的用户信息，以便崔费。</p>
+<h4 id="（7）银行账户管理系统"><a href="#（7）银行账户管理系统" class="headerlink" title="（7）银行账户管理系统"></a>（7）银行账户管理系统</h4><p>基本要求：实现客户账户信息（账号、姓名、余额、身份证号码、单位、联系电话、地址），存款类型（类别号、类别名）及业务员信息（工号、姓名、联系电话）的插入、删除、修改、浏览和查询管理；实现客户存款管理（存款业务编号、存款账号、存款类别号、金额、时间、业务员工号）；实现客户取款管理（取款业务编号、取款账号、取款类别号、金额、取款时间、业务员工号）；实现客户转帐管理（转帐业务编号、转入账号、转出帐号、转帐金额、转帐时间、业务员工号）；建立数据库相关表之间的参照完整性约束；创建触发器，分别实现存款、取款、转账时自动更新应客户的账户余额；创建触发器，分别实现取款、转账时账户余额不足的操作失败管理；创建存储过程，统计账户余额高于指定数额的帐户信息；创建视图，查询不同类型存款的客户信息。</p>
+<h4 id="（8）服饰销售统计系统"><a href="#（8）服饰销售统计系统" class="headerlink" title="（8）服饰销售统计系统"></a>（8）服饰销售统计系统</h4><p>基本要求：实现服饰信息（编号、名称、类别、供应商、价格、可售数量），服饰类型（类别号、类别名）和销售员信息（工号、姓名、联系电话）的插入、删除、修改、浏览和查询管理；实现服饰销售管理（销售单号、服饰名称、销售数量、总金额、时间、销售员工号）；建立数据库相关表之间的参照完整性约束；创建触发器，实现某种服饰售出时可售数量的自动更新；创建视图，按类别查询可销售的服饰信息，以及无货可销的服饰信息；创建存储过程，统计不同销售员的售货数量及售货金额，以及某一时间段内不同类别服饰的销售数量。</p>
+<h4 id="（9）房屋租赁管理系统"><a href="#（9）房屋租赁管理系统" class="headerlink" title="（9）房屋租赁管理系统"></a>（9）房屋租赁管理系统</h4><p>基本要求：实现房主信息（房主编号、姓名、性别、住址、联系电话），租赁者信息（姓名、身份证编号、性别、住址、联系电话），房屋信息（房号、地址、房型、最多能容纳的房客数、租金及房屋状态（待租赁、已出租））和房型信息（房型编号、户型、面积），业务员信息（工号、姓名、联系电话）的登记、删除、修改、浏览和查询管理；建立数据库相关表之间的参照完整性约束；实现房屋的租赁管理（房号、租赁者姓名、是否已付押金，业务员工号）。创建触发器，实现租赁者租房已付押金时房屋状态自动变更；创建视图，按类型查询可租赁的房屋信息；创建存储过程，查询并统计不同类型房屋的租赁情况。</p>
+<h4 id="（10）水费收缴管理系统"><a href="#（10）水费收缴管理系统" class="headerlink" title="（10）水费收缴管理系统"></a>（10）水费收缴管理系统</h4><p>基本要求：实现客户（客户编号、姓名、性别、联系电话、住址），用水类型（类别号、类别名、水价）及业务员信息（工号、姓名、联系电话）的插入、删除、修改、浏览和查询管理；实现客户用水管理（客户号、月份、用水类别号、用水度数）；实现客户费用管理（客户号、月份、费用、收费标志），收费标志的默认值置为未收；实现收费登记（客户、月份、应收费用、实收费用、业务员工号），并自动修改收费标志（用触发器实现）；建立数据库相关表之间的参照完整性约束；创建触发器，实现收费时自动更新应收费用和实收费用，计算本次结余，然后修改客户信息表中的结余金额； 创建存储过程，统计指定月份应收费用和实收费用； 创建视图，查询指定月份未交费的用户信息，以便崔费。</p>
+<h4 id="（11）服饰库存管理系统"><a href="#（11）服饰库存管理系统" class="headerlink" title="（11）服饰库存管理系统"></a>（11）服饰库存管理系统</h4><p>基本要求：实现服饰信息（服饰编号、名称、类别号、单价、库存数），管理员信息（工号、姓名、联系电话）和服饰类别信息（类别号、类别名称、是否破损）的插入、删除、修改、浏览和查询管理；实现服饰的出库管理（出库单号、服饰名称、出库数量、出库时间、管理员工号）；实现入库管理（入库单号、服饰名称、入库数量、入库时间、管理员工号）；建立数据库相关表之间的参照完整性约束；创建触发器，实现已破损服饰的自动毁除登记管理；创建视图，按类别查询不同服饰的编号、名称、总数和库存量；创建存储过程，查询库存数少于指定数目的在库服饰信息，以便进货。</p>
+<h4 id="（12）车辆租赁系统"><a href="#（12）车辆租赁系统" class="headerlink" title="（12）车辆租赁系统"></a>（12）车辆租赁系统</h4><p>基本要求：实现车主信息（车主编号、姓名、性别、住址、联系电话），租赁者信息（姓名、身份证编号、性别、住址、联系电话），车辆信息（车号、车型、车价、车辆状态（待租赁、已出租））和车型信息（车型编号、车型名称、租金），业务员信息（工号、姓名、联系电话）的登记、删除、修改、浏览和查询管理；建立数据库相关表之间的参照完整性约束；实现车辆的租赁管理（车号、租赁者姓名、是否已付押金，业务员工号）。创建触发器，实现租赁者租车已付押金时车辆状态自动变更；创建视图，按车型查询可租赁的车辆信息；创建存储过程，查询并统计不同类型车辆的租赁情况。</p>
+<h4 id="（13）鲜花库存管理系统"><a href="#（13）鲜花库存管理系统" class="headerlink" title="（13）鲜花库存管理系统"></a>（13）鲜花库存管理系统</h4><p>基本要求：实现鲜花信息（鲜花编号、名称、类别号、单价、库存数），管理员信息（工号、姓名、联系电话）和鲜花类别信息（类别号、类别名称、是否残破）的插入、删除、修改、浏览和查询管理；实现鲜花的出库管理（出库单号、鲜花名称、出库数量、出库时间、管理员工号）；实现鲜花的入库管理（入库单号、鲜花名称、入库数量、入库时间、管理员工号）；建立数据库相关表之间的参照完整性约束；创建触发器，实现已破损鲜花的自动毁除登记管理；创建视图，按类别查询不同鲜花的编号、名称、总数和库存量；创建存储过程，查询库存数少于指定数目的在库鲜花信息，以便进货。</p>
+<h4 id="（14）图书销售统计系统"><a href="#（14）图书销售统计系统" class="headerlink" title="（14）图书销售统计系统"></a>（14）图书销售统计系统</h4><p>基本要求：实现图书信息（编号、名称、类别、出版社、价格、可售册数），图书类型（类别号、类别名）和销售员信息（工号、姓名、联系电话）的插入、删除、修改、浏览和查询管理；实现图书销售管理（销售单号、图书编号、图书名称、销售册数、总金额、时间、销售员工号）；建立数据库相关表之间的参照完整性约束；创建触发器，实现图书售出时图书可售册数的自动更新；创建视图，按类别查询可销售的图书信息，以及无货可销的图书信息；创建存储过程，统计不同销售员的售书册数及售书金额，以及某一时间段内不同类别图书的销售册数。</p>
+<h4 id="（15）高中毕业生录取信息管理系统"><a href="#（15）高中毕业生录取信息管理系统" class="headerlink" title="（15）高中毕业生录取信息管理系统"></a>（15）高中毕业生录取信息管理系统</h4><p>基本要求：实现学生基本信息（学号、姓名、性别、出生年月、班级、籍贯、高考成绩），录取院校信息（院校编号、院校名称、院校地址）的插入、删除、修改、浏览和查询管理；实现学生录取信息管理（学号、姓名、录取院校编号、录取院校名称、录取批次）；建立数据库相关表之间的参照完整性约束；创建存储过程，统计各班级不同批次录取的人数；创建视图，查询被不同批次院校录取的学生信息（学号、姓名、性别、班级、录取院校、高考成绩）。</p>
+<h4 id="（16）食品销售统计系统"><a href="#（16）食品销售统计系统" class="headerlink" title="（16）食品销售统计系统"></a>（16）食品销售统计系统</h4><p>基本要求：实现食品信息（编号、名称、类别、供应商、价格、可售数量），食品类型（类别号、类别名）和销售员信息（工号、姓名、联系电话）的插入、删除、修改、浏览和查询管理；实现食品销售管理（销售单号、食品编号、食品名称、销售数量、总金额、时间、销售员工号）；建立数据库相关表之间的参照完整性约束；创建触发器，实现食品售出时食品可售数量的自动更新；创建视图，按类别查询可销售的食品信息，以及无货可销的食品信息；创建存储过程，统计不同销售员的售货数量及售货金额，以及某一时间段内不同类别食品的销售数量。</p>
+<p><span id="busuanzi_container_page_pv">  本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2018/12/24/数据库原理课程设计方案/">数据库原理课程设计方案</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">kangtan</a></p>
+        <p><span>发布时间:</span>2018-12-24, 09:36:29</p>
+        <p><span>最后更新:</span>2018-12-24, 10:16:29</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/12/24/数据库原理课程设计方案/" title="数据库原理课程设计方案">/2018/12/24/数据库原理课程设计方案/</a>
+            <span class="copy-path" data-clipboard-text="原文: /2018/12/24/数据库原理课程设计方案/　　作者: kangtan" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2018/12/24/给Hexo博客添加访问统计/">
+                    给Hexo博客添加访问统计
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2018/12/23/我的测试/">
+                    我的测试
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"数据库原理课程设计方案　| kangtan的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+	
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2018/12/24/给Hexo博客添加访问统计/" title="上一篇: 给Hexo博客添加访问统计">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2018/12/23/我的测试/" title="下一篇: 我的测试">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/12/26/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/24/Markdown基本操作/">Markdown基本操作</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/24/数据库课程设计（学生成绩管理系统）/">数据库课程设计（学生成绩管理系统）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/24/给Hexo博客添加访问统计/">给Hexo博客添加访问统计</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/24/数据库原理课程设计方案/">数据库原理课程设计方案</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/23/我的测试/">我的测试</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/23/操作系统复习资料/">操作系统复习资料</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/23/Windows下通过GitHub+Hexo搭建个人博客的步骤/">Windows下通过GitHub+Hexo搭建个人博客的步骤</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/22/计算机系统结构复习资料/">计算机系统结构复习资料</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2018 kangtan
+            </div>
+            <div class="footer-right">
+                
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style="display:none">
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style="display:none">
+                        <span id="page-visit" title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 8;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  </div>
+</body>
+</html>

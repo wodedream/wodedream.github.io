@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="kangtan">
+
+
+
+<meta name="description" content="考试题型：填空题（30’）、判断题（10’）、名词解释（20’）、简答题（20’）、计算题（20’）">
+<meta name="keywords" content="计算机系统结构">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机系统结构复习资料">
+<meta property="og:url" content="/2018/12/22/计算机系统结构复习资料/index.html">
+<meta property="og:site_name" content="kangtan的博客">
+<meta property="og:description" content="考试题型：填空题（30’）、判断题（10’）、名词解释（20’）、简答题（20’）、计算题（20’）">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-12-23T14:27:32.339Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="计算机系统结构复习资料">
+<meta name="twitter:description" content="考试题型：填空题（30’）、判断题（10’）、名词解释（20’）、简答题（20’）、计算题（20’）">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="kangtan的博客" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=434828571,4005966633&fm=26&gp=0.jpg">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>计算机系统结构复习资料 | kangtan的博客</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?023158b4c9d97942be746fc9f5fde1da";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+	
+	<script>
+	(function(){
+		var bp = document.createElement('script');
+		bp.src = '//push.zhanzhang.baidu.com/push.js';
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+  
+
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+
+	
+		<form id="search-form" class="search">
+			<input type="text" id="st-search-input" name="q" results="0" class="st-default-search-input" maxlength="50" placeholder="Search..." autocomplete="off" autocorrect="off">
+			<i class="fa fa-times" onclick="resetSearch()"></i>
+		</form>
+	
+
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=434828571,4005966633&amp;fm=26&amp;gp=0.jpg" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">kangtan</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">世界上只有一种成功，就是以自己喜欢的方式过一生</p>
+        
+
+        
+            <div id="local-search-result"></div>
+            <p class="no-result">No results found <i class="fa fa-spinner fa-pulse"></i></p>
+			<p class="loading-xml">Loading XML File... <i class="fa fa-spinner fa-pulse"></i></p>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:1575224782@qq.cn" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="https://github.com/wodedream" title="GitHub"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown基本操作/">Markdown基本操作</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/搭建个人博客的步骤/">搭建个人博客的步骤</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据库原理/">数据库原理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/添加访问量/">添加访问量</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算机系统结构/">计算机系统结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/课程设计/">课程设计</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://blog.csdn.net/Adusts">我的csdn</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://jwxt.jsu.edu.cn/jsxsd/">强智系统</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">闻道有先后，术业有专攻</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">kangtan</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=434828571,4005966633&amp;fm=26&amp;gp=0.jpg" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">kangtan</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">世界上只有一种成功，就是以自己喜欢的方式过一生</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:1575224782@qq.cn" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/wodedream" title="GitHub"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
+</nav>
+      <div class="body-wrap"><article id="[layout]-计算机系统结构复习资料" class="article article-type-[layout]" itemscope="" itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/12/22/计算机系统结构复习资料/" class="article-date">
+      <time datetime="2018-12-22T13:20:11.000Z" itemprop="datePublished">2018-12-22</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      计算机系统结构复习资料
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/学习资料/">学习资料</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/计算机系统结构/">计算机系统结构</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>考试题型：填空题（30’）、判断题（10’）、名词解释（20’）、简答题（20’）、计算题（20’）<br><a id="more"></a></p>
+<h2 id="第一章-计算机系统结构的基础知识"><a href="#第一章-计算机系统结构的基础知识" class="headerlink" title="第一章 计算机系统结构的基础知识"></a>第一章 计算机系统结构的基础知识</h2><h3 id="1、计算机系统的层次结构"><a href="#1、计算机系统的层次结构" class="headerlink" title="1、计算机系统的层次结构"></a>1、计算机系统的层次结构</h3><p>第六级 应用语言机器<br>第五级 高级语言机器<br>第四级 汇编语言机器<br>第三级 操作系统机器<br>第二级 传统机器语言机器<br>第一级 微程序机器</p>
+<h3 id="2、计算机系统结构的定义"><a href="#2、计算机系统结构的定义" class="headerlink" title="2、计算机系统结构的定义"></a>2、计算机系统结构的定义</h3><p>(1）计算机系统结构是指传统机器程序员所看到的计算机属性，即概念性结构和功能特性。（狭义）<br>(2）指令系统结构、组成、硬件。（广义）</p>
+<h3 id="3-Amdahl定律"><a href="#3-Amdahl定律" class="headerlink" title="3.Amdahl定律"></a>3.Amdahl定律</h3><p>当一个系统中某个部件进行改进后，所能获得的整个系统性能的提高，受限于该部件的执行时间占总执行时间的百分比。</p>
+<h3 id="4、CPU性能公式"><a href="#4、CPU性能公式" class="headerlink" title="4、CPU性能公式"></a>4、CPU性能公式</h3><p>CPU时间 = 执行程序所需的时钟周期数<em>时钟周期时间<br>CPI（平均始终周期数）= 执行程序所需的时钟周期数/所执行的指令条数<br>CPU时间 = IC</em>CPI*时钟周期时间   IC:执行指令条数<br>P9 例题1.3 P28-P29 1.7、1.10 CPU相关性能计算（计算题）</p>
+<h3 id="5、冯诺依曼机的五部分"><a href="#5、冯诺依曼机的五部分" class="headerlink" title="5、冯诺依曼机的五部分"></a>5、冯诺依曼机的五部分</h3><p>运算器、控制器、存储器、输入设备和输出设备。</p>
+<h3 id="6、并行性的概念"><a href="#6、并行性的概念" class="headerlink" title="6、并行性的概念"></a>6、并行性的概念</h3><p>并行性是指计算机系统在同一时刻或同一时间间隔内进行多种运算或操作。包含两种含义：<br>（1）同时性，两个或两个以上的事件在同一时刻发生。<br>（2）并发性，两个或两个以上时间在同一时间间隔内发生。</p>
+<h3 id="7、提高并行性的技术途径"><a href="#7、提高并行性的技术途径" class="headerlink" title="7、提高并行性的技术途径"></a>7、提高并行性的技术途径</h3><p>时间重叠、资源重复、资源共享。</p>
+<h3 id="8、三种不同的多处理机"><a href="#8、三种不同的多处理机" class="headerlink" title="8、三种不同的多处理机"></a>8、三种不同的多处理机</h3><p>同构型多处理机、异构型多处理机和分布式系统。</p>
+<h3 id="9、时间重叠"><a href="#9、时间重叠" class="headerlink" title="9、时间重叠"></a>9、时间重叠</h3><p>在并行性概念中引入时间因素，让多个并行处理过程在时间上相互错开，轮流重叠使用同一套硬件设备的各个部分，以加快硬件周转而赢得速度。典型例子：流水线技术</p>
+<h3 id="10、资源重复"><a href="#10、资源重复" class="headerlink" title="10、资源重复"></a>10、资源重复</h3><p>在并行性概念中引入空间因素，以数量取胜。通过重复设置硬件资源，大幅度提高计算机系统的性能。</p>
+<h3 id="11、资源共享"><a href="#11、资源共享" class="headerlink" title="11、资源共享"></a>11、资源共享</h3><p>这是一种软件方法，它使多个任务按一定的时间顺序轮流使用同一套硬件设备。</p>
+<h3 id="12、耦合度"><a href="#12、耦合度" class="headerlink" title="12、耦合度"></a>12、耦合度</h3><p>用来反映多级系统中各计算机之间物理连接的紧密程度和交互作用能力的强弱。</p>
+<h2 id="第二章-指令系统的设计"><a href="#第二章-指令系统的设计" class="headerlink" title="第二章 指令系统的设计"></a>第二章 指令系统的设计</h2><h3 id="1、指令系统结构的分类"><a href="#1、指令系统结构的分类" class="headerlink" title="1、指令系统结构的分类"></a>1、指令系统结构的分类</h3><p>堆栈型结构、累加器型结构、通用寄存器型结构<br>通用寄存器型结构进一步分成三种类型：寄存器-寄存器型、寄存器-存储器型、存储器-存储器型。</p>
+<h3 id="2、寻址方式"><a href="#2、寻址方式" class="headerlink" title="2、寻址方式"></a>2、寻址方式</h3><p>定义：寻址方式是指指令系统中如何形成所要访问的数据地址。<br>寄存器寻址 ADD R1，R2<br>立即数寻址 ADD R3，#6<br>偏移寻址 ADD R3，120（R2）<br>寄存器间接寻址 ADD R4，（R2）</p>
+<h3 id="3、RISC结构和CISC"><a href="#3、RISC结构和CISC" class="headerlink" title="3、RISC结构和CISC"></a>3、RISC结构和CISC</h3><p>RISC：精简指令集计算机<br>CISC：复杂指令集计算机</p>
+<h3 id="4、MIPS指令系统结构"><a href="#4、MIPS指令系统结构" class="headerlink" title="4、MIPS指令系统结构"></a>4、MIPS指令系统结构</h3><p>32个64位的通用寄存器，寻址方式只有立即数寻址和偏移量寻址两种。</p>
+<h3 id="5、MIPS指令格式"><a href="#5、MIPS指令格式" class="headerlink" title="5、MIPS指令格式"></a>5、MIPS指令格式</h3><p>（1）I类指令： load指令、store指令、立即数指令、分支指令、寄存器跳转、寄存器跳转并链接<br>（2）R类指令： ALU指令、专用寄存器读/写指令、move指令<br>（3）J类指令： 跳转指令、跳转并链接指令、自陷指令、异常返回指令</p>
+<h3 id="6、指令举例"><a href="#6、指令举例" class="headerlink" title="6、指令举例"></a>6、指令举例</h3><p>LD R2，20（R3） 装入双字<br>LW R2，20（R3） 装入字<br>SD R2，20（R3） 保存双字<br>SW R2，20（R3） 保存字<br>DADDU R1，R2，R3 无符号加  Regs[R1]&lt;–Regs[R2]+Regs[R3]<br>DADDU R1，R2，#6 加无符号立即数  Regs[R1]&lt;–Regs[R2]+6<br>J name 跳转<br>JAL name 跳转并链接<br>BEQZ R4，name 等于零时分支</p>
+<h3 id="7、常见的三种通用寄存器型机器的优缺点各有哪些？"><a href="#7、常见的三种通用寄存器型机器的优缺点各有哪些？" class="headerlink" title="7、常见的三种通用寄存器型机器的优缺点各有哪些？"></a>7、常见的三种通用寄存器型机器的优缺点各有哪些？</h3><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>寄存器-寄存器型</td>
+<td>简单，指令字长固定，是一种简单的代码生成模型，各种指令的执行时钟周期数相近。</td>
+<td>和指令中含有对存储器操作数访问的结构相比,指令条数多，因而其目标代码较大。</td>
+</tr>
+<tr>
+<td>寄存器-存储器型</td>
+<td>可以直接对存储器操作数进行访问，容易对指令进行编码，且其目标代码较小。</td>
+<td>指令中的操作数类型不同。在一条指令中同时对一个寄存器操作数和存诸器操作数进行编码,将限制指令所能够表示的寄存器个数。由于指令的操作数可以存储在不同类型的存储器单元，所以每条指令的执行时钟周期数也不尽相同。 </td>
+</tr>
+<tr>
+<td>存储器-存储器型</td>
+<td>是一种最紧密的编码方式，无需“浪费”寄存器保存变量。</td>
+<td>指令字长多种多样。每条指令的执行时钟周期数也大不.样，对存储器的频繁访问将导致存储器访问瓶颈问题。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="第三章-流水线技术"><a href="#第三章-流水线技术" class="headerlink" title="第三章 流水线技术"></a>第三章 流水线技术</h2><h3 id="1、-流水线技术的分类"><a href="#1、-流水线技术的分类" class="headerlink" title="1、 流水线技术的分类"></a>1、 流水线技术的分类</h3><p>（1）按照用于计算机系统的等级不同，分为：部件级流水线、处理机级流水线和系统级流水线。<br>（2）按照完成的功能分：单功能流水线、多功能流水线。<br>（3）动态流水线、静态流水线。<br>（4）按照流水线中是否存在反馈回路，分为：线性流水线、非线性流水线。</p>
+<h3 id="2、流水线性能分析（P63-例3-2-P91-3-6、3-8）"><a href="#2、流水线性能分析（P63-例3-2-P91-3-6、3-8）" class="headerlink" title="2、流水线性能分析（P63 例3.2 P91 3.6、3.8）"></a>2、流水线性能分析（P63 例3.2 P91 3.6、3.8）</h3><p>（1）绘制时空图<br>（2）计算吞吐率、加速比、流水线效率。</p>
+<h3 id="3、单功能非线性流水线的最优调度"><a href="#3、单功能非线性流水线的最优调度" class="headerlink" title="3、单功能非线性流水线的最优调度"></a>3、单功能非线性流水线的最优调度</h3><p>（1）根据预约表写出禁止表F<br>（2）根据禁止表F写出初始冲突向量C0<br>（3）根据初始冲突向量C0画出状态转换图</p>
+<h3 id="4、流水线技术的五个周期及个周期完成的工作"><a href="#4、流水线技术的五个周期及个周期完成的工作" class="headerlink" title="4、流水线技术的五个周期及个周期完成的工作"></a>4、流水线技术的五个周期及个周期完成的工作</h3><p>（1）取指令周期（IF），以程序计数器（PC）中的内容作为地址，从存储器中取出指令并放入指令寄存器（IR）；同时PC+4，指向顺序的下一条指令。<br>（2）指令译码/读寄存器周期（ID），对指令进行译码，并用IR中的寄存器地址去访问通用寄存器组，读出所需的操作数。<br>（3）执行/有效地址计算周期（EX），ALU对在上一个周期准备好的操作数进行运算或处理。<br>（4）存储器访问/分支完成周期（MEM），load和store指令、分支指令。<br>（5）写回周期（WB），把结果写入通用寄存器组。<br>在上述5个周期的实现方案中，分支指令和store指令需要四个周期，其他指令需要5个周期才能完成。</p>
+<h3 id="5、流水线技术"><a href="#5、流水线技术" class="headerlink" title="5、流水线技术"></a>5、流水线技术</h3><p>将一个重复的时序过程，分解成为若干个子过程，而每一个子过程都可有效地在其专用功能段上与其它子过程同时执行。</p>
+<h3 id="6、定向技术"><a href="#6、定向技术" class="headerlink" title="6、定向技术"></a>6、定向技术</h3><p>用来解决写后读冲突的。在发生写后读相关的情况下，在计算结果尚未出来之前，后面等待使用该结果的指令并不见得是马上就要用该结果。如果能够将该计算结果从其产生的地方直接送到其它指令需要它的地方，那么就可以避免停顿。</p>
+<h3 id="7、多功能流水线"><a href="#7、多功能流水线" class="headerlink" title="7、多功能流水线"></a>7、多功能流水线</h3><p>指各段可以进行不同的连接，以实现不同的功能的流水线。</p>
+<h3 id="8、静态流水线"><a href="#8、静态流水线" class="headerlink" title="8、静态流水线"></a>8、静态流水线</h3><p>指在同一时间内，多功能流水线中的各段只能按同一种功能的连接方式工作的流水线。当流水线要切换到另- -种功能时，必须等前面的任务都流出流水线之后，才能改变连接。</p>
+<h3 id="9、动态流水线"><a href="#9、动态流水线" class="headerlink" title="9、动态流水线"></a>9、动态流水线</h3><p>指在同一时间内，多功能流水线中的各段可以按照不同的方式连接，同时执行多种功能的流水线。它允许在某些段正在实现某种运算时，另一些段却在实现另一种运算。</p>
+<h2 id="第四章-向量处理机"><a href="#第四章-向量处理机" class="headerlink" title="第四章 向量处理机"></a>第四章 向量处理机</h2><h3 id="1、向量"><a href="#1、向量" class="headerlink" title="1、向量"></a>1、向量</h3><p>向量是计算机系统中经常使用的一种数据类型，向量由一组有序、具有相同类型和位数的元素组成。</p>
+<h3 id="2、向量的处理方式"><a href="#2、向量的处理方式" class="headerlink" title="2、向量的处理方式"></a>2、向量的处理方式</h3><p>横向处理方式、纵向处理方式、纵横处理方式。</p>
+<h3 id="3、分段开采技术"><a href="#3、分段开采技术" class="headerlink" title="3、分段开采技术"></a>3、分段开采技术</h3><p>当向量的长度大于向量寄存器的长度时，必须把长向量分成长度固定的段，然后循环分段处理，每一次循环只处理一个向量段。</p>
+<h3 id="4、向量流水线链接"><a href="#4、向量流水线链接" class="headerlink" title="4、向量流水线链接"></a>4、向量流水线链接</h3><h2 id="第七章-存储系统"><a href="#第七章-存储系统" class="headerlink" title="第七章 存储系统"></a>第七章 存储系统</h2><h3 id="1、直接映像"><a href="#1、直接映像" class="headerlink" title="1、直接映像"></a>1、直接映像</h3><p>是指主存中的每一块只能被放置到Cache中唯一的一个位置。</p>
+<h3 id="2、组相连映像"><a href="#2、组相连映像" class="headerlink" title="2、组相连映像"></a>2、组相连映像</h3><p>在组相连映像中，Cache被等分为若干组，每组由若干组构成。主存中的每一块可以被放置到Cache中唯一的一个组的任何一个位置。</p>
+<h3 id="3、尽早重启动"><a href="#3、尽早重启动" class="headerlink" title="3、尽早重启动"></a>3、尽早重启动</h3><p>在请求字没有到达时,CPU处于等待状态。一旦请求字到达,就立即发送给CPU,让等待的CPU尽早重启动,继续执行。</p>
+<h3 id="4、请求字优先"><a href="#4、请求字优先" class="headerlink" title="4、请求字优先"></a>4、请求字优先</h3><p>调块时,首先向存储器请求CPU所要的请求字。请求字一旦到达,就立刻送往CPU,让CPU继续执行,同时从存储器调入该块的其余部分。请求字优先也称为回绕读取或关键字优先。</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2018/12/22/计算机系统结构复习资料/">计算机系统结构复习资料</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">kangtan</a></p>
+        <p><span>发布时间:</span>2018-12-22, 21:20:11</p>
+        <p><span>最后更新:</span>2018-12-23, 22:27:32</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/12/22/计算机系统结构复习资料/" title="计算机系统结构复习资料">/2018/12/22/计算机系统结构复习资料/</a>
+            <span class="copy-path" data-clipboard-text="原文: /2018/12/22/计算机系统结构复习资料/　　作者: kangtan" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2018/12/23/Windows下通过GitHub+Hexo搭建个人博客的步骤/">
+                    Windows下通过GitHub+Hexo搭建个人博客的步骤
+                </a>
+            </div>
+        
+        
+    </nav>
+
+  
+</article>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"计算机系统结构复习资料　| kangtan的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+	
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2018/12/23/Windows下通过GitHub+Hexo搭建个人博客的步骤/" title="上一篇: Windows下通过GitHub+Hexo搭建个人博客的步骤">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/12/26/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/24/Markdown基本操作/">Markdown基本操作</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/24/数据库课程设计（学生成绩管理系统）/">数据库课程设计（学生成绩管理系统）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/24/给Hexo博客添加访问统计/">给Hexo博客添加访问统计</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/24/数据库原理课程设计方案/">数据库原理课程设计方案</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/23/我的测试/">我的测试</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/23/操作系统复习资料/">操作系统复习资料</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/23/Windows下通过GitHub+Hexo搭建个人博客的步骤/">Windows下通过GitHub+Hexo搭建个人博客的步骤</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/22/计算机系统结构复习资料/">计算机系统结构复习资料</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2018 kangtan
+            </div>
+            <div class="footer-right">
+                
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style="display:none">
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style="display:none">
+                        <span id="page-visit" title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 8;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  </div>
+</body>
+</html>

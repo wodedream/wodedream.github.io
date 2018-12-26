@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="kangtan">
+
+
+
+<meta name="description" content="目录">
+<meta name="keywords" content="Markdown基本操作">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Markdown基本操作">
+<meta property="og:url" content="/2018/12/24/Markdown基本操作/index.html">
+<meta property="og:site_name" content="kangtan的博客">
+<meta property="og:description" content="目录">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://w3ktt.club/words/img/md.png">
+<meta property="og:image" content="https://images2018.cnblogs.com/blog/1255627/201803/1255627-20180304225956670-396979841.png">
+<meta property="og:image" content="/2018/12/24/Markdown基本操作/图片的连接">
+<meta property="og:updated_time" content="2018-12-25T12:36:24.206Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Markdown基本操作">
+<meta name="twitter:description" content="目录">
+<meta name="twitter:image" content="https://w3ktt.club/words/img/md.png">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="kangtan的博客" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=434828571,4005966633&fm=26&gp=0.jpg">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>Markdown基本操作 | kangtan的博客</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?023158b4c9d97942be746fc9f5fde1da";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+	
+	<script>
+	(function(){
+		var bp = document.createElement('script');
+		bp.src = '//push.zhanzhang.baidu.com/push.js';
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+  
+
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+
+	
+		<form id="search-form" class="search">
+			<input type="text" id="st-search-input" name="q" results="0" class="st-default-search-input" maxlength="50" placeholder="Search..." autocomplete="off" autocorrect="off">
+			<i class="fa fa-times" onclick="resetSearch()"></i>
+		</form>
+	
+
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=434828571,4005966633&amp;fm=26&amp;gp=0.jpg" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">kangtan</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">世界上只有一种成功，就是以自己喜欢的方式过一生</p>
+        
+
+        
+            <div id="local-search-result"></div>
+            <p class="no-result">No results found <i class="fa fa-spinner fa-pulse"></i></p>
+			<p class="loading-xml">Loading XML File... <i class="fa fa-spinner fa-pulse"></i></p>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:1575224782@qq.cn" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="https://github.com/wodedream" title="GitHub"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown基本操作/">Markdown基本操作</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/搭建个人博客的步骤/">搭建个人博客的步骤</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据库原理/">数据库原理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/添加访问量/">添加访问量</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算机系统结构/">计算机系统结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/课程设计/">课程设计</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://blog.csdn.net/Adusts">我的csdn</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://jwxt.jsu.edu.cn/jsxsd/">强智系统</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">闻道有先后，术业有专攻</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">kangtan</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=434828571,4005966633&amp;fm=26&amp;gp=0.jpg" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">kangtan</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">世界上只有一种成功，就是以自己喜欢的方式过一生</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:1575224782@qq.cn" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/wodedream" title="GitHub"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
+</nav>
+      <div class="body-wrap"><article id="post-Markdown基本操作" class="article article-type-post" itemscope="" itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/12/24/Markdown基本操作/" class="article-date">
+      <time datetime="2018-12-24T13:31:41.000Z" itemprop="datePublished">2018-12-24</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Markdown基本操作
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markdown基本操作/">Markdown基本操作</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>目录<br><a id="more"></a><br><img src="https://w3ktt.club/words/img/md.png" alt="markdown目录"></p>
+<h1 id="一、Markdown简介"><a href="#一、Markdown简介" class="headerlink" title="一、Markdown简介"></a>一、Markdown简介</h1><p>既然我们用了它，就该对其有一个大概的了解</p>
+<h2 id="1-1、认识Markdown"><a href="#1-1、认识Markdown" class="headerlink" title="1.1、认识Markdown"></a>1.1、认识Markdown</h2><p>Markdown 是一种轻量级的「标记语言」，它的优点很多，目前也被越来越多的写作爱好者，撰稿者广泛使用。看到这里请不要被「标记」、「语言」所迷惑，Markdown的语法十分简单。常用的标记符号也不超过十个，这种相对于更为复杂的HTML标记语言来说，Markdown可谓是十分轻量的，学习成本也不需要太多，且一旦熟悉这种语法规则，会有一劳永逸的效果。<br>它用简洁的语法代替排版，而不像一般我们用的字处理软件Word或Pages有大量的排版、字体设置。它使我们专心于码字，用「标记」语法，来代替常见的排版格式。</p>
+<h2 id="1-2、使用Markdown的好处"><a href="#1-2、使用Markdown的好处" class="headerlink" title="1.2、使用Markdown的好处"></a>1.2、使用Markdown的好处</h2><p>专注你的文字内容而不是排版样式。<br>轻松的导出 HTML、PDF 和本身的 .md 文件。<br>纯文本内容，兼容所有的文本编辑器与字处理软件。<br>可读，直观。适合所有人的写作语言。</p>
+<h1 id="二、Markdown语法规则"><a href="#二、Markdown语法规则" class="headerlink" title="二、Markdown语法规则"></a>二、Markdown语法规则</h1><p>上面对Markdown有了一个基本的认识，并且对其使用的好处也介绍了几点。那么该怎样编写Markdown文档呢？请继续往下看…</p>
+<h2 id="2-1、标题"><a href="#2-1、标题" class="headerlink" title="2.1、标题"></a>2.1、标题</h2><p>举例说明：</p>
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><h2 id="2-2、列表"><a href="#2-2、列表" class="headerlink" title="2.2、列表"></a>2.2、列表</h2><p>在编写Markdown文档时，列表几乎上都会用到的，而列表可分为无序列表和有序列表两种，他们的语法都很简单</p>
+<h3 id="2-2-1、有序列表"><a href="#2-2-1、有序列表" class="headerlink" title="2.2.1、有序列表"></a>2.2.1、有序列表</h3><p>要使用有序列表，只要在一段文字前加上序号即可。如1. xxx、2. xxx…，这里值得注意的是，序号后面跟上一个英文符号的点（.）,并且(.)后面有一个空格，不然无效。<br>举例说明：</p>
+<ol>
+<li>中国</li>
+<li>美国</li>
+<li>英国<h3 id="2-2-2、无序列表"><a href="#2-2-2、无序列表" class="headerlink" title="2.2.2、无序列表"></a>2.2.2、无序列表</h3>要是用无序列表，只要在一段文字前面加上特定的符号即可。这里的符号可以是(<em>、-、+)。如- xxx、+ xxx、</em> xxx。同样值得注意的是符号与文字之间有一个空格。<br>举例说明：</li>
+</ol>
+<ul>
+<li>中国                 + 中国                 * 中国</li>
+<li>美国      &lt;===&gt;      + 美国     &lt;===&gt;       * 美国</li>
+<li>英国                 + 英国                 * 英国<br>上面三个符号的效果是一样的，并且可以混用。<h3 id="2-2-3、有序列表和无序列表之间的混用情况"><a href="#2-2-3、有序列表和无序列表之间的混用情况" class="headerlink" title="2.2.3、有序列表和无序列表之间的混用情况"></a>2.2.3、有序列表和无序列表之间的混用情况</h3>在实际编写中，可能会出现列表包含子列表的情况，也可能发生无序与有序列表之间嵌套的情况。这种情况下，只要在子列表的字段前面加上一个Tab键，即4个空格就行了。<br>请看下面的实例。</li>
+</ul>
+<ol>
+<li>中国<ul>
+<li>深圳</li>
+<li>上海</li>
+</ul>
+</li>
+<li>美国<ul>
+<li>纽约</li>
+<li>硅谷</li>
+</ul>
+</li>
+<li>英国<ul>
+<li>英格兰</li>
+<li>威尔士<br>上面只演示了，有序列表嵌套无序列表的情况，其他的根据这个格式按照有序和无序列表的语法改动就行了。<h2 id="2-3、引用"><a href="#2-3、引用" class="headerlink" title="2.3、引用"></a>2.3、引用</h2>引用的使用：在一段文本的前面加上英文的右尖括号，即(&gt;)符号。值得注意的是，&gt;符号与文本之间有一个空格。<h3 id="2-3-1、基本使用"><a href="#2-3-1、基本使用" class="headerlink" title="2.3.1、基本使用"></a>2.3.1、基本使用</h3>举例说明：<blockquote>
+<p>我是引用文本</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="2-3-2、嵌套引用"><a href="#2-3-2、嵌套引用" class="headerlink" title="2.3.2、嵌套引用"></a>2.3.2、嵌套引用</h3><p>嵌套引用在一个引用文本中在引用其他的文本，也可以和列表一起使用<br>举例说明：</p>
+<blockquote>
+<p>我是引用文本1</p>
+<blockquote>
+<p>我是嵌套的引用文本1<br>我是嵌套的引用文本2</p>
+<blockquote>
+<ol>
+<li>在嵌套一层1   </li>
+<li>在嵌套一层2</li>
+</ol>
+</blockquote>
+<p>我是嵌套的引用文本3</p>
+</blockquote>
+<p>我是引用文本2</p>
+</blockquote>
+<h2 id="2-4、文字的样式"><a href="#2-4、文字的样式" class="headerlink" title="2.4、文字的样式"></a>2.4、文字的样式</h2><p>在Markdown中，还提供了几种很常见的文字样式，比如：加粗、倾斜、删除线等。</p>
+<h3 id="2-4-1、加粗"><a href="#2-4-1、加粗" class="headerlink" title="2.4.1、加粗"></a>2.4.1、加粗</h3><p>在文本的两端分别加上两个星号（<strong>）或者下划线（__）。比如</strong>xxx<strong>，注意:不能有空格<br>举例说明：
+</strong>我是加粗的文本1**<br><strong>我是加粗的文本2</strong></p>
+<h3 id="2-4-2、斜体"><a href="#2-4-2、斜体" class="headerlink" title="2.4.2、斜体"></a>2.4.2、斜体</h3><p>在文本的两端分别加上一个星号（<em>）或者一个下划线（_）。比如</em>xxx<em>，注意:不能有空格<br>举例说明：
+</em>我是倾斜的文本1*<br><em>我是倾斜的文本2</em></p>
+<h3 id="2-4-3、删除线"><a href="#2-4-3、删除线" class="headerlink" title="2.4.3、删除线"></a>2.4.3、删除线</h3><p>在文本的两端分别加上两个波浪号（<del>）。比如</del>xxx<del>，注意:不能有空格<br>举例说明：<br>~~我是要删除的文本</del></p>
+<h3 id="2-4-4、下划线"><a href="#2-4-4、下划线" class="headerlink" title="2.4.4、下划线"></a>2.4.4、下划线</h3><p>在Markdown的原生语法中是不存在下划线的语法的，因为它会和链接产生冲突。在下面讲到Markdown引用链接时，你就明白了。但是我们可以用html代码达到下划线的效果。</p>
+<h4 id="2-4-4-1、解决方案："><a href="#2-4-4-1、解决方案：" class="headerlink" title="2.4.4.1、解决方案："></a>2.4.4.1、解决方案：</h4><p>使用行内Html代码解决,当然，上面的几种文本样式同样可以用Html去完成它。</p>
+<h5 id="2-4-4-1-1、使用行内Html代码解决的两种方式"><a href="#2-4-4-1-1、使用行内Html代码解决的两种方式" class="headerlink" title="2.4.4.1.1、使用行内Html代码解决的两种方式"></a>2.4.4.1.1、使用行内Html代码解决的两种方式</h5><p>使用Html标签中的<u></u>标签，但是这种方案不推荐，因为Html5的代码规范以及<u></u>标签的不可定制性。<br>举例说明：<br><u>我是带有下划线的文本</u></p>
+<h5 id="2-4-4-1-2、使用Html语言中的标签，相信对于前端开发者来说，是再熟悉不过了。推荐用此方式"><a href="#2-4-4-1-2、使用Html语言中的标签，相信对于前端开发者来说，是再熟悉不过了。推荐用此方式" class="headerlink" title="2.4.4.1.2、使用Html语言中的标签，相信对于前端开发者来说，是再熟悉不过了。推荐用此方式"></a>2.4.4.1.2、使用Html语言中的<span></span>标签，相信对于前端开发者来说，是再熟悉不过了。推荐用此方式</h5><p>举例说明：下划线为绿色，并且高度为1px，并且下划线为虚线。<br><span style="border-bottom:1px dashed green;">所添加的需要加下划线的行内文字</span><br>注意，要实现下划线为实线的话，请把dashed修改为solid<br>上面就是实现下划线的两种方式。</p>
+<h3 id="2-4-5、数学公式中的表达方法（很少用到）"><a href="#2-4-5、数学公式中的表达方法（很少用到）" class="headerlink" title="2.4.5、数学公式中的表达方法（很少用到）"></a>2.4.5、数学公式中的表达方法（很少用到）</h3><p>用Markdown编写文档，用到数学公式的地方很少，我在这里列举常用的两三种，如果你想深入研究它，请参见在Markdown中输入数学公式(MathJax)这边文章，写的很详细<br>我在这里只举例说明数学公式中的上划线与下划线。<br>举例说明：<br>上划线：<br>        $\overline{X}$<br>下划线：<br>        $\underline{X}$</p>
+<h2 id="2-5、链接与图片"><a href="#2-5、链接与图片" class="headerlink" title="2.5、链接与图片"></a>2.5、链接与图片</h2><p>在实际的文档编写中，链接的引用于图片的插入都很重要，而且其使用度也很高。而且链接和图片在其语法上也只有一个细微的差别。请看下面的实例</p>
+<h3 id="2-5-1、链接"><a href="#2-5-1、链接" class="headerlink" title="2.5.1、链接"></a>2.5.1、链接</h3><p>链接的使用：英文下的一对中括号[]来包裹住链接的文本，中括号后面跟上英文下的一对小括号()来包裹住链接的地址。比如：<a href="http://www.baidu.com" target="_blank" rel="noopener">百度</a></p>
+<h3 id="2-5-2、图片"><a href="#2-5-2、图片" class="headerlink" title="2.5.2、图片"></a>2.5.2、图片</h3><p>图片的使用和链接的使用几乎相同，只要在[]前面加上一个英文的感叹号即可，即(!)符号。<br>举例说明：<br><img src="https://images2018.cnblogs.com/blog/1255627/201803/1255627-20180304225956670-396979841.png" alt="图片1"><br><img src="图片的连接" alt="图片2"></p>
+<h2 id="2-6、表格"><a href="#2-6、表格" class="headerlink" title="2.6、表格"></a>2.6、表格</h2><p>Markdown中的实现表格是比较麻烦的。这里不多作解释，看下面的例子就知道了。</p>
+<h3 id="2-6-1、基本使用"><a href="#2-6-1、基本使用" class="headerlink" title="2.6.1、基本使用"></a>2.6.1、基本使用</h3><p>举例说明：</p>
+<table>
+<thead>
+<tr>
+<th>列名1</th>
+<th>列名2</th>
+<th>列名3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>值1</td>
+<td>值1</td>
+<td>值2</td>
+</tr>
+<tr>
+<td>值1</td>
+<td>值1</td>
+<td>值2</td>
+</tr>
+<tr>
+<td>值1</td>
+<td>值1</td>
+<td>值2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-6-2、表格的对齐方式"><a href="#2-6-2、表格的对齐方式" class="headerlink" title="2.6.2、表格的对齐方式"></a>2.6.2、表格的对齐方式</h3><p>默认的对齐方式为：左对齐方式。<br>举例说明：以上面的例子举例，第一列左对齐，第二列居中对齐，第三列右对齐。<br>注意和上面例子的不同之处</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">列名1</th>
+<th style="text-align:center">列名2</th>
+<th style="text-align:right">列名3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">值1</td>
+<td style="text-align:center">值1</td>
+<td style="text-align:right">值2</td>
+</tr>
+<tr>
+<td style="text-align:left">值1</td>
+<td style="text-align:center">值1</td>
+<td style="text-align:right">值2</td>
+</tr>
+<tr>
+<td style="text-align:left">值1</td>
+<td style="text-align:center">值1</td>
+<td style="text-align:right">值2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-7、关键字、代码块、多行文本、换行"><a href="#2-7、关键字、代码块、多行文本、换行" class="headerlink" title="2.7、关键字、代码块、多行文本、换行"></a>2.7、关键字、代码块、多行文本、换行</h2><p>在编写文档，特别是技术型文章的时候，关键字和代码框的使用尤其的多。这里对上面提到的4个知识点一一的讲解。</p>
+<h3 id="2-7-1、关键字"><a href="#2-7-1、关键字" class="headerlink" title="2.7.1、关键字"></a>2.7.1、关键字</h3><p>关键字的使用：在文本的两端分别加上英文的(<code>)这个符号。即键盘上Tab键的上面哪一个键。注意是英文的情况下。例：</code>xxx<code>、</code>yyy<code>举例说明：</code>关键字1<code>、</code>Java<code>、</code>Android<code>、</code>ios`</p>
+<h3 id="2-7-2、代码块"><a href="#2-7-2、代码块" class="headerlink" title="2.7.2、代码块"></a>2.7.2、代码块</h3><p>代码框的使用：在一段文本的前面加上4个空格，或者一个Tab键的长度。<br>举例说明：<br>    注意看下面的每一行前面都有一个Tab键的额长度，即4个空格<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for(int i = 0 ; i &lt; 5; i++)&#123;</span><br><span class="line">    println(&quot;asdasdasdasd&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-7-3、纯文本"><a href="#2-7-3、纯文本" class="headerlink" title="2.7.3、纯文本"></a>2.7.3、纯文本</h3><p>纯文本的使用：在一段文本的两端分别加上3个英文的（`）符号，例：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">其实在写文章的时候，几乎用不到纯文本，因为在用代码块几乎上可以代替他了。不过还是有特例，就比如说上面的那个例子就用到了纯文本。</span><br><span class="line">举例说明：</span><br></pre></td></tr></table></figure></p>
+<p>for(int i = 0 ; i &lt; 5; i++){<br>    println(“asdasdasdasd”)<br>}<br><code>`</code></p>
+<h3 id="2-7-4、换行符"><a href="#2-7-4、换行符" class="headerlink" title="2.7.4、换行符"></a>2.7.4、换行符</h3><p>换行符的使用这里提供三种方式：<br>使用Html中的<br>标签（不推荐），因为在某一些工具或在线平台中达不到效果<br>段落与段落之间使用一个空行（推荐）<br>在第一段文本结束后使用两个空格，在换行写第二段文本。（推荐）</p>
+<ol>
+<li><p>使用<br><br>举例说明：<br>第一段文本<br><br>第二段文本</p>
+</li>
+<li><p>使用空行<br>举例说明：<br>第一段文本</p>
+</li>
+</ol>
+<p>第二段文本</p>
+<ol start="3">
+<li>使用两个空格<br>举例说明：</li>
+</ol>
+<p>第一段文本(这里跟了两个空格)<br>第二段文本</p>
+<h2 id="2-8、分割线"><a href="#2-8、分割线" class="headerlink" title="2.8、分割线"></a>2.8、分割线</h2><p>分割线的使用：在段落与段落之间加上3个中划线(-)。<br>举例说明：</p>
+<h2 id="44"><a href="#44" class="headerlink" title="44"></a>44</h2><p>42222</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2018/12/24/Markdown基本操作/">Markdown基本操作</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">kangtan</a></p>
+        <p><span>发布时间:</span>2018-12-24, 21:31:41</p>
+        <p><span>最后更新:</span>2018-12-25, 20:36:24</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/12/24/Markdown基本操作/" title="Markdown基本操作">/2018/12/24/Markdown基本操作/</a>
+            <span class="copy-path" data-clipboard-text="原文: /2018/12/24/Markdown基本操作/　　作者: kangtan" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2018/12/26/hello-world/">
+                    Hello World
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2018/12/24/数据库课程设计（学生成绩管理系统）/">
+                    数据库课程设计（学生成绩管理系统）
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"Markdown基本操作　| kangtan的博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+	
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2018/12/26/hello-world/" title="上一篇: Hello World">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2018/12/24/数据库课程设计（学生成绩管理系统）/" title="下一篇: 数据库课程设计（学生成绩管理系统）">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/12/26/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/24/Markdown基本操作/">Markdown基本操作</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/24/数据库课程设计（学生成绩管理系统）/">数据库课程设计（学生成绩管理系统）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/24/给Hexo博客添加访问统计/">给Hexo博客添加访问统计</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/24/数据库原理课程设计方案/">数据库原理课程设计方案</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/23/我的测试/">我的测试</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/23/操作系统复习资料/">操作系统复习资料</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/23/Windows下通过GitHub+Hexo搭建个人博客的步骤/">Windows下通过GitHub+Hexo搭建个人博客的步骤</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/22/计算机系统结构复习资料/">计算机系统结构复习资料</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2018 kangtan
+            </div>
+            <div class="footer-right">
+                
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style="display:none">
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style="display:none">
+                        <span id="page-visit" title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 8;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  </div>
+</body>
+</html>

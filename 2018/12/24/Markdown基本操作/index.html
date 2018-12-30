@@ -35,8 +35,6 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 
-    <link rel="alternate" href="/atom.xml" title="kangtan的博客" type="application/atom+xml">
-
 
 
     <link rel="shortcut icon" href="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=434828571,4005966633&fm=26&gp=0.jpg">
@@ -208,9 +206,9 @@
                     <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" href="mailto:1575224782@qq.cn" title="Email"></a>
-                            
                                 <a class="fa GitHub" href="https://github.com/wodedream" title="GitHub"></a>
+                            
+                                <a class="fa CSDN" href="https://blog.csdn.net/Adusts" title="CSDN"></a>
                             
                         </ul>
                     </nav>
@@ -280,9 +278,9 @@
             <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" target="_blank" href="mailto:1575224782@qq.cn" title="Email"></a>
-                            
                                 <a class="fa GitHub" target="_blank" href="https://github.com/wodedream" title="GitHub"></a>
+                            
+                                <a class="fa CSDN" target="_blank" href="https://blog.csdn.net/Adusts" title="CSDN"></a>
                             
                         </ul>
             </nav>
@@ -454,7 +452,7 @@
 </table>
 <h2 id="2-7、关键字、代码块、多行文本、换行"><a href="#2-7、关键字、代码块、多行文本、换行" class="headerlink" title="2.7、关键字、代码块、多行文本、换行"></a>2.7、关键字、代码块、多行文本、换行</h2><p>在编写文档，特别是技术型文章的时候，关键字和代码框的使用尤其的多。这里对上面提到的4个知识点一一的讲解。</p>
 <h3 id="2-7-1、关键字"><a href="#2-7-1、关键字" class="headerlink" title="2.7.1、关键字"></a>2.7.1、关键字</h3><p>关键字的使用：在文本的两端分别加上英文的(<code>)这个符号。即键盘上Tab键的上面哪一个键。注意是英文的情况下。例：</code>xxx<code>、</code>yyy<code>举例说明：</code>关键字1<code>、</code>Java<code>、</code>Android<code>、</code>ios`</p>
-<h3 id="2-7-2、代码块"><a href="#2-7-2、代码块" class="headerlink" title="2.7.2、代码块"></a>2.7.2、代码块</h3><p>代码框的使用：在一段文本的前面加上4个空格，或者一个Tab键的长度。<br>举例说明：<br>    注意看下面的每一行前面都有一个Tab键的额长度，即4个空格<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for(int i = 0 ; i &lt; 5; i++)&#123;</span><br><span class="line">    println(&quot;asdasdasdasd&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-7-2、代码块"><a href="#2-7-2、代码块" class="headerlink" title="2.7.2、代码块"></a>2.7.2、代码块</h3><p>代码框的使用：在一段文本的前面加上4个空格，或者一个Tab键的长度。<br>举例说明：<br>    注意看下面的每一行前面都有一个Tab键的额长度，即4个空格<br><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(int <span class="built_in">i</span> = <span class="number">0</span> ; <span class="built_in">i</span> &lt; <span class="number">5</span>; <span class="built_in">i</span>++)&#123;</span><br><span class="line">    println(<span class="string">"asdasdasdasd"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h3 id="2-7-3、纯文本"><a href="#2-7-3、纯文本" class="headerlink" title="2.7.3、纯文本"></a>2.7.3、纯文本</h3><p>纯文本的使用：在一段文本的两端分别加上3个英文的（`）符号，例：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">其实在写文章的时候，几乎用不到纯文本，因为在用代码块几乎上可以代替他了。不过还是有特例，就比如说上面的那个例子就用到了纯文本。</span><br><span class="line">举例说明：</span><br></pre></td></tr></table></figure></p>
 <p>for(int i = 0 ; i &lt; 5; i++){<br>    println(“asdasdasdasd”)<br>}<br><code>`</code></p>
 <h3 id="2-7-4、换行符"><a href="#2-7-4、换行符" class="headerlink" title="2.7.4、换行符"></a>2.7.4、换行符</h3><p>换行符的使用这里提供三种方式：<br>使用Html中的<br>标签（不推荐），因为在某一些工具或在线平台中达不到效果<br>段落与段落之间使用一个空行（推荐）<br>在第一段文本结束后使用两个空格，在换行写第二段文本。（推荐）</p>
@@ -620,7 +618,7 @@
                 $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
             }
             else {
-                var backgroundnum = 8;
+                var backgroundnum = 5;
                 var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
                 $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
             }
@@ -642,7 +640,7 @@
         var oOpenInNew = {
             
             
-            
+             post: ".article-entry a[href], .copyright a[href]", 
             
             
             

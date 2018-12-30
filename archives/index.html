@@ -26,8 +26,6 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 
-    <link rel="alternate" href="/atom.xml" title="kangtan的博客" type="application/atom+xml">
-
 
 
     <link rel="shortcut icon" href="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=434828571,4005966633&fm=26&gp=0.jpg">
@@ -199,9 +197,9 @@
                     <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" href="mailto:1575224782@qq.cn" title="Email"></a>
-                            
                                 <a class="fa GitHub" href="https://github.com/wodedream" title="GitHub"></a>
+                            
+                                <a class="fa CSDN" href="https://blog.csdn.net/Adusts" title="CSDN"></a>
                             
                         </ul>
                     </nav>
@@ -271,9 +269,9 @@
             <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" target="_blank" href="mailto:1575224782@qq.cn" title="Email"></a>
-                            
                                 <a class="fa GitHub" target="_blank" href="https://github.com/wodedream" title="GitHub"></a>
+                            
+                                <a class="fa CSDN" target="_blank" href="https://blog.csdn.net/Adusts" title="CSDN"></a>
                             
                         </ul>
             </nav>
@@ -657,7 +655,7 @@
                 $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
             }
             else {
-                var backgroundnum = 8;
+                var backgroundnum = 5;
                 var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
                 $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
             }
@@ -679,7 +677,7 @@
         var oOpenInNew = {
             
             
-            
+             post: ".article-entry a[href], .copyright a[href]", 
             
             
             

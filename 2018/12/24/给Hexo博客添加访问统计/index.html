@@ -31,8 +31,6 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 
-    <link rel="alternate" href="/atom.xml" title="kangtan的博客" type="application/atom+xml">
-
 
 
     <link rel="shortcut icon" href="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=434828571,4005966633&fm=26&gp=0.jpg">
@@ -204,9 +202,9 @@
                     <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" href="mailto:1575224782@qq.cn" title="Email"></a>
-                            
                                 <a class="fa GitHub" href="https://github.com/wodedream" title="GitHub"></a>
+                            
+                                <a class="fa CSDN" href="https://blog.csdn.net/Adusts" title="CSDN"></a>
                             
                         </ul>
                     </nav>
@@ -276,9 +274,9 @@
             <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" target="_blank" href="mailto:1575224782@qq.cn" title="Email"></a>
-                            
                                 <a class="fa GitHub" target="_blank" href="https://github.com/wodedream" title="GitHub"></a>
+                            
+                                <a class="fa CSDN" target="_blank" href="https://blog.csdn.net/Adusts" title="CSDN"></a>
                             
                         </ul>
             </nav>
@@ -331,12 +329,12 @@
       
           
         <p>hexo添加访问量统计功能可以用百度的站长统计、leancloud，还有不蒜子，这里我用的不蒜子，感觉挺简单的。<br><a id="more"></a></p>
-<h3 id="引入不蒜子"><a href="#引入不蒜子" class="headerlink" title="引入不蒜子"></a>引入<a href="http://busuanzi.ibruce.info/" target="_blank" rel="noopener">不蒜子</a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script async src=&quot;//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="引入不蒜子"><a href="#引入不蒜子" class="headerlink" title="引入不蒜子"></a>引入<a href="http://busuanzi.ibruce.info/" target="_blank" rel="noopener">不蒜子</a></h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">"//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>这段代码可以写在footer.ejs里或者header.ejs里或者layout.ejs里，我用的yilia主题，放在/themes/yilia/layout/_partial/footer.ejs</p>
-<p>添加站点访问量<br>通常站点的总访问量会显示在footer的位置，所以我们可以在footer.ejs里加上如下标签：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;span id=&quot;busuanzi_container_site_uv&quot;&gt; </span><br><span class="line">  本站访客数&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;人次</span><br><span class="line">&lt;/span&gt;</span><br></pre></td></tr></table></figure></p>
+<p>添加站点访问量<br>通常站点的总访问量会显示在footer的位置，所以我们可以在footer.ejs里加上如下标签：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_site_uv"</span>&gt;</span> </span><br><span class="line">  本站访客数<span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_site_uv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>人次</span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>计算访问量的方法有两种：<br>算法a：pv的方式，单个用户连续点击n篇文章，记录n次访问量。<br>算法b：uv的方式，单个用户连续点击n篇文章，只记录1次访客数。<br>我用的是uv的方式，大家自行选择即可。</p>
-<p>添加文章访问量<br>文章的访问量显示在文章里面，所以在article.ejs里加上文章访问量的标签：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;span id=&quot;busuanzi_container_page_pv&quot;&gt;</span><br><span class="line">   本文总阅读量&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;次</span><br><span class="line">&lt;/span&gt;</span><br></pre></td></tr></table></figure></p>
-<p>我们直接就这样放在yilia主题中，首页也会显示该网页的访问量，没法正常使用，所以我加一个判断，如果是首页不显示该文章的访问量，下面这段代码添加在/themes/yilia/layout/_partial/article.ejs的header的日期后面：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;% if ( !index )&#123; %&gt;</span><br><span class="line">		&lt;span class=&quot;archive-article-date&quot;&gt;</span><br><span class="line">			阅读量 &lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;</span><br><span class="line">		&lt;/span&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure></p>
+<p>添加文章访问量<br>文章的访问量显示在文章里面，所以在article.ejs里加上文章访问量的标签：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_container_page_pv"</span>&gt;</span></span><br><span class="line">   本文总阅读量<span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_page_pv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>次</span><br><span class="line"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>我们直接就这样放在yilia主题中，首页也会显示该网页的访问量，没法正常使用，所以我加一个判断，如果是首页不显示该文章的访问量，下面这段代码添加在/themes/yilia/layout/_partial/article.ejs的header的日期后面：<br><figure class="highlight mojolicious"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">%</span></span></span><span class="perl"> <span class="keyword">if</span> ( !<span class="keyword">index</span> )&#123; </span><span class="xml"><span class="tag">%&gt;</span></span></span><br><span class="line"><span class="xml">		<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"archive-article-date"</span>&gt;</span></span></span><br><span class="line"><span class="xml">			阅读量 <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"busuanzi_value_page_pv"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="xml">		<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">%</span></span></span><span class="perl"> &#125; </span><span class="xml"><span class="tag">%&gt;</span></span></span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -486,7 +484,7 @@
                 $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
             }
             else {
-                var backgroundnum = 8;
+                var backgroundnum = 5;
                 var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
                 $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
             }
@@ -508,7 +506,7 @@
         var oOpenInNew = {
             
             
-            
+             post: ".article-entry a[href], .copyright a[href]", 
             
             
             

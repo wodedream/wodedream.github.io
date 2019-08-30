@@ -23,10 +23,12 @@
 <meta property="og:site_name" content="kangtan的博客">
 <meta property="og:description" content="第一章 绪论">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-30T07:40:40.980Z">
+<meta property="og:image" content="https://w3ktt.club">
+<meta property="og:updated_time" content="2018-12-30T12:04:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="操作系统复习资料">
 <meta name="twitter:description" content="第一章 绪论">
+<meta name="twitter:image" content="https://w3ktt.club">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -213,7 +215,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown基本操作/">Markdown基本操作</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/搭建个人博客的步骤/">搭建个人博客的步骤</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/操作系统/">操作系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据库原理/">数据库原理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/添加访问量/">添加访问量</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算机系统结构/">计算机系统结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/课程设计/">课程设计</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown基本操作/">Markdown基本操作</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/搭建个人博客的步骤/">搭建个人博客的步骤</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/操作系统/">操作系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据库原理/">数据库原理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/添加访问量/">添加访问量</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算机系统结构/">计算机系统结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/课程设计/">课程设计</a></li></ul>
                     </div>
                 </section>
                 
@@ -352,6 +354,16 @@
 <li>异常，也称内中断、例外或陷入，指源自CPU执行指令内部的事件，如程序的非法操作码、地址越界、算术溢出等。</li>
 </ol>
 <h3 id="2、断点和恢复点"><a href="#2、断点和恢复点" class="headerlink" title="2、断点和恢复点"></a>2、断点和恢复点</h3><p>当中断发生时，CPU刚执行完的那条指令地址称为“断点”。<br>中断时，程序计数器所指的地址（即短点的逻辑后续指令）称为恢复点。</p>
+<h3 id="3、和心态和用户态"><a href="#3、和心态和用户态" class="headerlink" title="3、和心态和用户态"></a>3、和心态和用户态</h3><ol>
+<li>核心态也称管态、系统状态、监督方式</li>
+<li>用户态：目态、用户转态或用户方式</li>
+</ol>
+<p>Intel x86处理机运行状态有0,1,2,3环之分，但是intel x86上运行的操作系统只用到0环和3环，0环表示核心态，3环表示用户态。</p>
+<h3 id="4、中断-异常处理的过程"><a href="#4、中断-异常处理的过程" class="headerlink" title="4、中断/异常处理的过程"></a>4、中断/异常处理的过程</h3><p>保存现场、分析中断/异常原因、进入相应的中断/异常处理程序、重新选择程序运行、恢复现场</p>
+<h3 id="5、系统调用是操作系统内核和用户态运行程序之间的借口。"><a href="#5、系统调用是操作系统内核和用户态运行程序之间的借口。" class="headerlink" title="5、系统调用是操作系统内核和用户态运行程序之间的借口。"></a>5、系统调用是操作系统内核和用户态运行程序之间的借口。</h3><h2 id="第三章-进程与处理机管理"><a href="#第三章-进程与处理机管理" class="headerlink" title="第三章 进程与处理机管理"></a>第三章 进程与处理机管理</h2><h3 id="1、进程的定义"><a href="#1、进程的定义" class="headerlink" title="1、进程的定义"></a>1、进程的定义</h3><p>进程是支持程序执行的机制，可以理解为程序对数据或请求的处理过程。</p>
+<h3 id="2、进程控制块包含三大类信息"><a href="#2、进程控制块包含三大类信息" class="headerlink" title="2、进程控制块包含三大类信息"></a>2、进程控制块包含三大类信息</h3><p>进程标识信息、处理机状态信息、进程控制信息。</p>
+<h3 id="3、进程状态变化图"><a href="#3、进程状态变化图" class="headerlink" title="3、进程状态变化图"></a>3、进程状态变化图</h3><p><img src="https://w3ktt.club" alt="进程状态变化图"></p>
+<p>### </p>
 
       
     </div>
@@ -363,7 +375,7 @@
         <p><span>本文标题:</span><a href="/2018/12/23/操作系统复习资料/">操作系统复习资料</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">kangtan</a></p>
         <p><span>发布时间:</span>2018-12-23, 13:38:08</p>
-        <p><span>最后更新:</span>2018-12-30, 15:40:40</p>
+        <p><span>最后更新:</span>2018-12-30, 20:04:32</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/12/23/操作系统复习资料/" title="操作系统复习资料">w3ktt.club/2018/12/23/操作系统复习资料/</a>
             <span class="copy-path" data-clipboard-text="原文: w3ktt.club/2018/12/23/操作系统复习资料/　　作者: kangtan" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -395,6 +407,29 @@
 
   
 </article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#第一章-绪论"><span class="toc-number">1.</span> <span class="toc-text">第一章 绪论</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、什么是操作系统？"><span class="toc-number">1.1.</span> <span class="toc-text">1、什么是操作系统？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、针对不同资源特点，资源管理分为两种方法：“时分”和“空分”"><span class="toc-number">1.2.</span> <span class="toc-text">2、针对不同资源特点，资源管理分为两种方法：“时分”和“空分”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、在时分共享使用的资源当中，有如下两种不同方式："><span class="toc-number">1.3.</span> <span class="toc-text">3、在时分共享使用的资源当中，有如下两种不同方式：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、专用操作系统"><span class="toc-number">1.4.</span> <span class="toc-text">3、专用操作系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、操作系统的最本质特征？"><span class="toc-number">1.5.</span> <span class="toc-text">4、操作系统的最本质特征？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第二章-操作系统运行机制和用户界面"><span class="toc-number">2.</span> <span class="toc-text">第二章 操作系统运行机制和用户界面</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、终端和异常"><span class="toc-number">2.1.</span> <span class="toc-text">1、终端和异常</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、断点和恢复点"><span class="toc-number">2.2.</span> <span class="toc-text">2、断点和恢复点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、和心态和用户态"><span class="toc-number">2.3.</span> <span class="toc-text">3、和心态和用户态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、中断-异常处理的过程"><span class="toc-number">2.4.</span> <span class="toc-text">4、中断/异常处理的过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、系统调用是操作系统内核和用户态运行程序之间的借口。"><span class="toc-number">2.5.</span> <span class="toc-text">5、系统调用是操作系统内核和用户态运行程序之间的借口。</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第三章-进程与处理机管理"><span class="toc-number">3.</span> <span class="toc-text">第三章 进程与处理机管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、进程的定义"><span class="toc-number">3.1.</span> <span class="toc-text">1、进程的定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、进程控制块包含三大类信息"><span class="toc-number">3.2.</span> <span class="toc-text">2、进程控制块包含三大类信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、进程状态变化图"><span class="toc-number">3.3.</span> <span class="toc-text">3、进程状态变化图</span></a></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
 
 
 
@@ -447,7 +482,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/12/26/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/24/Markdown基本操作/">Markdown基本操作</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/24/数据库课程设计（学生成绩管理系统）/">数据库课程设计（学生成绩管理系统）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/24/给Hexo博客添加访问统计/">给Hexo博客添加访问统计</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/24/数据库原理课程设计方案/">数据库原理课程设计方案</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/23/我的测试/">我的测试</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/23/操作系统复习资料/">操作系统复习资料</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/23/Windows下通过GitHub+Hexo搭建个人博客的步骤/">Windows下通过GitHub+Hexo搭建个人博客的步骤</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/22/计算机系统结构复习资料/">计算机系统结构复习资料</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/08/30/重新学Java/">重新学Java</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/30/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/24/Markdown基本操作/">Markdown基本操作</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/24/数据库课程设计（学生成绩管理系统）/">数据库课程设计（学生成绩管理系统）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/24/给Hexo博客添加访问统计/">给Hexo博客添加访问统计</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/24/数据库原理课程设计方案/">数据库原理课程设计方案</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/23/我的测试/">我的测试</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/23/操作系统复习资料/">操作系统复习资料</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/23/Windows下通过GitHub+Hexo搭建个人博客的步骤/">Windows下通过GitHub+Hexo搭建个人博客的步骤</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/22/计算机系统结构复习资料/">计算机系统结构复习资料</a></li></ul>
 
 
 
@@ -461,7 +496,7 @@
         <div id="footer-info">
             <div class="footer-left">
                 <i class="fa fa-copyright"></i> 
-                2018 kangtan
+                2018-2019 kangtan
             </div>
             <div class="footer-right">
                 
@@ -538,6 +573,23 @@
         }
     
 </script>
+
+    <script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "(つェ⊂) 我藏好了哦~ " + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "(*´∇｀*) 被你发现啦~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
 
 <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>

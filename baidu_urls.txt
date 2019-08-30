@@ -1,4 +1,5 @@
-w3ktt.club/2018/12/26/hello-world/
+w3ktt.club/2019/08/30/重新学Java/
+w3ktt.club/2018/12/30/hello-world/
 w3ktt.club/2018/12/24/Markdown基本操作/
 w3ktt.club/2018/12/24/数据库课程设计（学生成绩管理系统）/
 w3ktt.club/2018/12/24/给Hexo博客添加访问统计/

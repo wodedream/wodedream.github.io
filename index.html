@@ -223,7 +223,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown基本操作/">Markdown基本操作</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/搭建个人博客的步骤/">搭建个人博客的步骤</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/操作系统/">操作系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据库原理/">数据库原理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/添加访问量/">添加访问量</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算机系统结构/">计算机系统结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/课程设计/">课程设计</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown基本操作/">Markdown基本操作</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/搭建个人博客的步骤/">搭建个人博客的步骤</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/操作系统/">操作系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据库原理/">数据库原理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/添加访问量/">添加访问量</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算机系统结构/">计算机系统结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/课程设计/">课程设计</a></li></ul>
                     </div>
                 </section>
                 
@@ -296,11 +296,11 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <article id="[layout]-重新学Java" class="article article-type-[layout]" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/12/26/hello-world/" class="article-date">
-      <time datetime="2018-12-26T05:08:35.758Z" itemprop="datePublished">2018-12-26</time>
+      <a href="/2019/08/30/重新学Java/" class="article-date">
+      <time datetime="2019-08-30T13:21:27.000Z" itemprop="datePublished">2019-08-30</time>
 </a>
 
 
@@ -315,7 +315,76 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/26/hello-world/">Hello World</a>
+      <a class="article-title" href="/2019/08/30/重新学Java/">重新学Java</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <ol>
+<li>面向对象三大特点：封装性、继承性、多态性。多态性能够增强代码复用性、提高开发效率、为修改程序提供便利。</li>
+<li>类是对象的抽象，它用于描述一组对象的共同特征和行为。</li>
+<li>构造方法会在创建对象时自动执行。</li>
+<li>可以通过调用System.gc()方法来进行垃圾回收，在回收之前对象的finalize()方法会被自动调用。</li>
+</ol>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/学习资料/">学习资料</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope="" itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/12/30/hello-world/" class="article-date">
+      <time datetime="2018-12-30T10:13:04.320Z" itemprop="datePublished">2018-12-30</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/12/30/hello-world/">Hello World</a>
     </h1>
   
 
@@ -337,7 +406,7 @@
       
       
         <p class="article-more-link">
-          <a href="/2018/12/26/hello-world/#more">阅读全文 >></a>
+          <a href="/2018/12/30/hello-world/#more">阅读全文 >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -890,7 +959,7 @@
         <div id="footer-info">
             <div class="footer-left">
                 <i class="fa fa-copyright"></i> 
-                2018 kangtan
+                2018-2019 kangtan
             </div>
             <div class="footer-right">
                 
@@ -971,6 +1040,23 @@
         }
     
 </script>
+
+    <script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "(つェ⊂) 我藏好了哦~ " + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "(*´∇｀*) 被你发现啦~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
 
 <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
